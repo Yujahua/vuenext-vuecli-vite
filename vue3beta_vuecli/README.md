@@ -40,3 +40,10 @@ Vue create project，run serve运行出错，`vue-loader-v16不存在`，
 在生成v16之前，做了版本上的一点错误修复（修复ts代码类型断言错误）
 
 同时对新增本地tag，命名: v16.0.0-beta.3.1
+
+## 项目依赖：
+- vue-router-next
+[官方链接](https://github.com/vuejs/vue-router-next)
+
+- vuex
+[官方链接](https://github.com/vuejs/vuex)
