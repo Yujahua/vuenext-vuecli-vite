@@ -1,0 +1,8 @@
+@font-face {
+  font-family: csii-vx-mobile-Icon;
+  font-style: normal;
+  font-weight: normal;
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  /* Version is required */
+  src: url("../iconfont.woff") format("woff"), url("../iconfont.ttf") format("truetype")
+}
