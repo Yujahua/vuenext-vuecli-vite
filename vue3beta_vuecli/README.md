@@ -23,7 +23,7 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Project depend：
+## Project dependencies：
 - [vue-router-next](https://github.com/vuejs/vue-router-next): 路由
 
 - [vuex](https://github.com/vuejs/vuex): 状态管理
@@ -35,9 +35,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - [sinon](https://github.com/sinonjs/sinon): 测试解耦工具
 
+## Npm links
 
-    
-    
+- [vue-router-next](https://www.npmjs.com/package/vue-router/v/4.0.0-beta.7)
+
+- [@vue/cli-plugin-router](https://www.npmjs.com/package/@vue/cli-plugin-router) cli脚手架管理router
 
 ## 目前遇到的问题： vue-next安装
 

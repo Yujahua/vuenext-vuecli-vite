@@ -28,7 +28,7 @@ vue create <yourproject>
 Before use vue cli command run `npm run serve`, it looks like we have to download `vue-loader` at tag version `v16.0.0-beta.3`
 ([click me](https://github.com/vuejs/vue-loader/tree/v16.0.0-beta.3)) which `@vue/cli-service` dependency. In fact, that's not a correct answer. We'd better use the branch `next` ([click me here!](https://github.com/vuejs/vue-loader/tree/next)) instead.
 
-Secondly, at the right version, run `npm install --production `, `npm run build` and then put the code all to your project modules, like `vuenext-vuecli-vite`'s modules. It is in this path: `./node_modules/@vue/cli-service/node_modules`. We should create a new folrder named `vue-load-v16` to put them.
+Secondly, at the right version, run `npm install --production `, `npm run build` and then put the code dir `./dist` to your project modules, like `vuenext-vuecli-vite`'s modules. It is in this path: `./node_modules/@vue/cli-service/node_modules`. We should create a new folrder named `vue-load-v16` to put them.
 
 But that's still a problem, if run `npm install` next time, the folder `vue-load-v16` deleted. To solve this problem, I publish a npm resource to save the `vue-loader-v16`.
 install
