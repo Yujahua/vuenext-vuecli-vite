@@ -15,7 +15,9 @@
   </div>
 </template>
 
-<script>import {Icon} from '@csii/vx-mobile'
+<script>
+// import {Icon} from '@csii/vx-mobile'
+import {Icon} from '../../../index'
 
 export default {
   name: 'icon-demo',
@@ -29,4 +31,5 @@ export default {
     [Icon.name]: Icon,
   },
 }
-</script>
+
+</script>

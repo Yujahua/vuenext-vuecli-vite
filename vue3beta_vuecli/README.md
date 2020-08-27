@@ -23,17 +23,23 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Project dependencies：
+## Project core dependencies：
 - [vue-router-next](https://github.com/vuejs/vue-router-next): 路由
 
 - [vuex](https://github.com/vuejs/vuex): 状态管理
 
-- [jest](https://github.com/facebook/jest): 前端自动化测试
+## Project test dependencies
+
+- [jest](https://github.com/facebook/jest): 前端自动化测试，`npm install jest -g`全局安装jest，执行`jest --init`
 
 - [@vue/test-utils @vue/server-test-utils](https://github.com/vuejs/vue-test-utils): vue测试
 
 
 - [sinon](https://github.com/sinonjs/sinon): 测试解耦工具
+
+## Compile error
+
+- [stylus](): `npm i stylus stylus-loader --save-dev`
 
 ## Npm links
 

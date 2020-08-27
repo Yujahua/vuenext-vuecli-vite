@@ -14,8 +14,10 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
-import {Icon} from '@csii/vx-mobile'
+<script>
+import {ref} from 'vue'
+// import {Icon} from '@csii/vx-mobile'
+import {Icon} from '../../../index'
 
 export default {
   name: 'icon-demo',
@@ -89,4 +91,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

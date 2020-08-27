@@ -17,7 +17,8 @@
   ></i>
 </template>
 
-<script>import {computed} from '@vue/composition-api'
+<script>
+import {computed} from 'vue'
 import loadSprite from './load-spirte'
 import defaultSvg from './default-svg-list'
 
@@ -52,7 +53,8 @@ export default {
     loadSprite()
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-icon {
@@ -350,4 +352,4 @@ export default {
   content: '\e604';
 }
 </style>
-<style lang="stylus" src="./css/style.css"></style>
+<style src="./css/style.css"></style>
