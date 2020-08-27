@@ -1,5 +1,5 @@
 /* eslint comma-dangle: ["error", "always-multiline"] */
-
+import pk from '../../package.json'
 // Import components core
 // import './_style/global.styl'
 import {transformCamelCase, warn} from './_util'
@@ -32,8 +32,7 @@ warn(
   'warn',
 )
 
-/* global MAN_VERSION */
-const version = /* @echo MAN_VERSION */ MAN_VERSION
+const version = pk.version
 
 export const components = {
   Icon,

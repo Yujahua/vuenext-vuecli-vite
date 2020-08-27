@@ -5,5 +5,6 @@ import router from './router'
 /**
  * about vue-router
  */
-console.dir(router)
-createApp(App).use(router).mount('#app')
+var app = createApp(App)
+
+app.use(router).mount('#app')
