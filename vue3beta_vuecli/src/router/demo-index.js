@@ -1,4 +1,4 @@
-export * as Home from '../views/Home'
+export {default as Home} from '../views/Home'
 export {default as Category} from '../views/Category'
 
 // export {default as Button} from '../components/button/demo'

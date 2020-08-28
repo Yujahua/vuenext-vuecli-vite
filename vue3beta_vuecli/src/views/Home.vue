@@ -3,18 +3,21 @@
     <div class="ui-home-logo">
       <!-- <img src alt /> -->
     </div>
-    <div class="ui-home-name" data-in-effect="fadeInLeftBig">CSII VX Mobile</div>
-    <div class="ui-home-time">0%</div>
+    <div class="ui-home-name" ref="homeName" data-in-effect="fadeInLeftBig">CSII VX Mobile</div>
+    <div class="ui-home-time" ref="homeTime">0%</div>
     <h1 class="ui-home-copyright">Produced By CSII VX - FDC &times; MFE</h1>
   </div>
 </template>
 
 <script>
-import {ref, onMounted} from 'vue'
+import {ref, onMounted, getCurrentInstance} from 'vue'
 
 export default {
   setup() {
     const percent = ref(0);
+    const homeName = ref(null);
+
+    // const homeTime = ref('')
 
     const timeCount = (fn) => {
       const duration = 2000
@@ -25,7 +28,8 @@ export default {
       const time = setInterval(() => {
         if (percent < 100) {
           percent += per
-          document.getElementsByClassName('.ui-home-time').text(`${parseInt(percent)}%`)
+          // console.log(homeName)
+          // homeName.value.text(`${parseInt(percent)}%`)
         } else {
           clearInterval(time)
           setTimeout(() => {
@@ -36,11 +40,13 @@ export default {
     }
 
     onMounted(() => {
-      document.getElementsByClassName('.ui-home-name')
-        .textillate()
-        .on('end.tlt')
+      // homeTime
+      //   .textillate()
+      //   .on('end.tlt')
+      console.log(homeName.value)
+      console.log(getCurrentInstance())
       timeCount(() => {
-        this.$router.replace('/category')
+        // this.$router.replace('/category')
       })
     })
 
