@@ -15,8 +15,7 @@ import {ref, onMounted, getCurrentInstance} from 'vue'
 export default {
   setup() {
     const percent = ref(0);
-    const homeName = ref(null);
-
+    // const homeName = ref(null);
     // const homeTime = ref('')
 
     const timeCount = (fn) => {
@@ -28,7 +27,6 @@ export default {
       const time = setInterval(() => {
         if (percent < 100) {
           percent += per
-          console.log(homeName)
 
           // onMounted hook, after then, ref does not render a dom-object or a instance
           // cannot find the issues's reason
@@ -48,6 +46,7 @@ export default {
       // homeTime
       //   .textillate()
       //   .on('end.tlt')
+
       const instance = getCurrentInstance();
       
       const proxy = instance.proxy;
@@ -55,7 +54,7 @@ export default {
       const router = proxy.$router;
 
       console.dir(textillate)
-      
+
       timeCount(() => {
         router.replace('/Category')
       })

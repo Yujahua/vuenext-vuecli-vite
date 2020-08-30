@@ -8,8 +8,6 @@ import textillate from './plugins/vue-textillate'
  */
 var app = createApp(App)
 
-console.log(textillate)
-
 app
 .use(router)
 .use(textillate)

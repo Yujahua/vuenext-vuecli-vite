@@ -53,6 +53,7 @@ export default {
     const components = ref(Components);
     const toggleCategory = (index, category) => {
       category.show = !category.show
+      // `this` here is a Proxy, textillate is in it.
       this.$set(components.value, index, category)
     }
     const goToComponent = (path) => this.$router.push(path)
