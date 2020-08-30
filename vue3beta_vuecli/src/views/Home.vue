@@ -28,7 +28,12 @@ export default {
       const time = setInterval(() => {
         if (percent < 100) {
           percent += per
-          // console.log(homeName)
+          console.log(homeName)
+
+          // onMounted hook, after then, ref does not render a dom-object or a instance
+          // cannot find the issues's reason
+          //
+
           // homeName.value.text(`${parseInt(percent)}%`)
         } else {
           clearInterval(time)
@@ -43,10 +48,16 @@ export default {
       // homeTime
       //   .textillate()
       //   .on('end.tlt')
-      console.log(homeName.value)
-      console.log(getCurrentInstance())
+      const instance = getCurrentInstance();
+      
+      const proxy = instance.proxy;
+      const textillate = proxy.textillate;
+      const router = proxy.$router;
+
+      console.dir(textillate)
+      
       timeCount(() => {
-        // this.$router.replace('/category')
+        router.replace('/Category')
       })
     })
 

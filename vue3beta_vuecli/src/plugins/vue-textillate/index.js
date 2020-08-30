@@ -49,13 +49,15 @@
 
     // Install for plugin
     function install(Vue) {
-        console.log(Vue)
         if(install.installed && _Vue === Vue) { return }
         install.installed = true;
 
         _Vue = Vue;
 
         var isDef = function (v) {return v!= undefined; };
+
+        // set reactive attribute textillate of $options
+        //
 
         var registerInstance = function(vm, callV) {
             var i = vm.config.globalProperties;
@@ -64,15 +66,21 @@
             }
         };
 
+        // get getCurrentInstance
+        const {getCurrentInstance} =  require('vue');
+
         // Global mixin 
         // cannot execute onMounted unMounted
         Vue.mixin({
-            onMount: function onMounted() {
-                VueTextillate.init(this);
-                registerInstance(this, this)
+            created: function onMounted() {
+                // vue $options
+                //
+
+                VueTextillate.prototype.init(getCurrentInstance());
+                registerInstance(getCurrentInstance().appContext, VueTextillate)
             },
             unMounted: function unMounted() {
-                registerInstance(this)
+                registerInstance(getCurrentInstance().appContext)
             }
         })
         
@@ -116,6 +124,28 @@
         )
 
         this.app = app;
+
+        const {provide, inject} =  require('vue');
+
+        var StoreSymbol = Symbol();
+        // provide at top root level App
+        var provideStore = function (store) {
+            provide(StoreSymbol, store)
+          }
+        // inject as cuosumer componnent use
+        var useStore = function() {
+            var store = inject(StoreSymbol);
+
+            if(!store){
+                // throw some errors
+
+            }
+
+            return store;
+        }
+        
+        this.provideStore = provideStore;
+        this.useStore = useStore;
     }
 
     //
