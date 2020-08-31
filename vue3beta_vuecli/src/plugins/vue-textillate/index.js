@@ -13,7 +13,7 @@
     ? module.exports = factory()
     : /* global define: readonly */typeof define === 'function' && define.amd 
         ? define(factory)
-        : (global = global || self, global.textillate = factory());
+        : (global = global || self, global.VueTextillate = factory());
     
 })(this, function() {
     'use strict';
@@ -128,10 +128,12 @@
         const {provide, inject} =  require('vue');
 
         var StoreSymbol = Symbol();
+
         // provide at top root level App
         var provideStore = function (store) {
             provide(StoreSymbol, store)
           }
+
         // inject as cuosumer componnent use
         var useStore = function() {
             var store = inject(StoreSymbol);
@@ -147,7 +149,6 @@
         this.provideStore = provideStore;
         this.useStore = useStore;
     }
-
     //
 
     VueTextillate.install = install;
