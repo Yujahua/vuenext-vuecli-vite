@@ -11,12 +11,15 @@
 
 <script>
 import {ref, onMounted, getCurrentInstance} from 'vue'
+import {useRouter} from 'vue-router'
 
 export default {
   setup() {
     const percent = ref(0);
     const homeName = ref(null);
     const homeTime = ref('');
+
+    const router = useRouter();
 
     const timeCount = (fn) => {
       const duration = 2000
@@ -47,10 +50,8 @@ export default {
       
       const proxy = instance.proxy;
       const textillate = proxy.textillate;
-      const router = proxy.$router;
 
       console.dir(textillate)
-      console.dir(instance)
 
       timeCount(() => {
         router.replace('/Category')

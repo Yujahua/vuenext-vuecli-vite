@@ -21,7 +21,9 @@
 </template>
 
 <script>
-import {getCurrentInstance,computed} from 'vue'
+import {computed} from 'vue'
+import {useRoute} from 'vue-router'
+
 import Icon from './components/icon'
 import './assets/responsive'
 export default {
@@ -30,17 +32,12 @@ export default {
     [Icon.name]: Icon
   },
   setup() {
+    const route = useRoute();
 
-    const navTitle = computed(function() {
-      return this.$route.name
-    });
-    const navSubTitle = computed(function() {
-      return this.$route.meta.description
-    });
-    const isHome = computed(function() {
-      const _vm = getCurrentInstance();
-      debugger
-      const path = _vm.proxy.$route.path
+    const navTitle = computed(() => route.name);
+    const navSubTitle = computed(() => route.meta.description);
+    const isHome = computed(() => {
+      const path = route.path
       return path === '/' || path === '/home' || path === '/category'
     });
 
