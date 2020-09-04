@@ -23,6 +23,7 @@
 <script>
 import {computed} from 'vue'
 import {useRoute} from 'vue-router'
+// router by useRouter fn, route by useRoute fn.
 
 import Icon from './components/icon'
 import './assets/responsive'
