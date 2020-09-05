@@ -23,54 +23,58 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Project core dependencies：
-- [vue-router-next](https://github.com/vuejs/vue-router-next): 路由
+---
 
-- [vuex](https://github.com/vuejs/vuex): 状态管理
+## Project Core Dependencies：
+- [vue-router-next](https://github.com/vuejs/vue-router-next): vue 3 router
 
-## Project test dependencies
+- [vuex](https://github.com/vuejs/vuex): import not yet
 
-- [jest](https://github.com/facebook/jest): 前端自动化测试，`npm install jest -g`全局安装jest，执行`jest --init`
+## Project Test Dependencies
 
-- [@vue/test-utils @vue/server-test-utils](https://github.com/vuejs/vue-test-utils): vue测试
+- [jest](https://github.com/facebook/jest): web automated testing
+
+    `npm install jest -g` install jest global，run command `jest --init`
+
+- [@vue/test-utils @vue/server-test-utils](https://github.com/vuejs/vue-test-utils): vue testing
 
 
-- [sinon](https://github.com/sinonjs/sinon): 测试解耦工具
+- [sinon](https://github.com/sinonjs/sinon): testing decoupling tool
 
-## Compile error
+## Project dev use
 
-- [stylus](): `npm i stylus stylus-loader --save-dev`
+- [stylus](https://stylus.bootcss.com/): css preprocessor
+
+    `npm i stylus stylus-loader --save-dev`
 
 ## Npm links
 
 - [vue-router-next](https://www.npmjs.com/package/vue-router/v/4.0.0-beta.7)
 
-- [@vue/cli-plugin-router](https://www.npmjs.com/package/@vue/cli-plugin-router) cli脚手架管理router
+- [@vue/cli-plugin-router](https://www.npmjs.com/package/@vue/cli-plugin-router): vue-cli (EN: command-line interface) to manage router
 
-## 目前遇到的问题： vue-next安装
+## Issues have been solved： vue-next-vuecli install
 
 > problem
 
-Vue create project，run serve运行出错，`vue-loader-v16不存在`，
-
-其次，如果直接修改依赖vue-loader名字为vue-loader-v16解决了上一个报错以后，会继续提示vue-template-compiler的问题
+After creat a vue 3 project, use vue-cli: `vue create project`. when I run `npm run serve` to run a serve, it throws error `vue-loader-v16 does not exsits`.
 
 > solve
 
-最终解决办法，追踪vue-loader-v16版本，查找到vue-loader的tag版本推荐v16.0.0-beta3可用
+Finally，by tracing the verison of vue-loader，I find out vue-loader's new tag verison, and by the occured error message before I guess v16.0.0-beta3 can stable.
+So，I download the tag，based it to build the dist directory，and put the package into the node_modules，named as `vue-loader-v16`
 
-于是，download当前tag，在此基础上build生成dist目录，整包放置到node_modules依赖下面，文件夹命名vue-loader-v16
+Before building it, also I modified in the version a little (resolve ts code's assert lost error)
 
-在生成v16之前，做了版本上的一点错误修复（修复ts代码类型断言错误）
+At the same time add a tag in my local git, named: v16.0.0-beta.3.1。
 
-同时对新增本地tag，命名: v16.0.0-beta.3.1
+> But after then I find it can not be that way to solve the problem. When I use package module， I should fix it every time. So I deceied change the way that，update it from npm. SO I update vue-loader'next branch code，and build it put away on the npm.
 
-> 后来发现，以上方式不合适，于是更改为，从vue-loader的next分支更新代码，打成依赖包放置在npm资源上
-
-提供以下dev环境安装（非官方，仅供个人学习）
+provide dev install below（Non-finicial，just for private studing）
 
 - [vue-loader-v16](https://www.npmjs.com/package/vue-loader-v16)
 
 ```sh
 npm i vue-loader-v16
 ```
+> At last: I hear that all the issues caused by npm, it's low version made it，so I delete my v16 dependency in the project，upgrade npm version to the newest release，updete modules，and this time run server is ok.
