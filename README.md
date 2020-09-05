@@ -36,3 +36,5 @@ install
 npm i vue-loader-v16
 ```
 Link is [vue-load-v16](https://www.npmjs.com/package/vue-loader-v16)
+
+> At last: I hear that all the issues caused by npm, it's low version made it，so I delete my v16 dependency in the project，upgrade npm version to the newest release，updete modules，and this time run server is ok.
