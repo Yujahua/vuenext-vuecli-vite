@@ -11,7 +11,7 @@
       :isVertical='isVertical'
       :imageUrl='imageUrl'
       :imageAlign='imageAlign'
-      :isDel.sync='isDel'></ui-graphic-list>
+      v-model:isDel='isDel'></ui-graphic-list>
   </div>
 </template>
 

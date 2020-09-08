@@ -24,7 +24,7 @@
       @keydown="onKeydown"
     ></textarea>
     <slot name="footer"></slot>
-    <template slot="children">
+    <template v-slot:children>
       <div v-if="errorInfo" class="ui-textarea-item-msg">
         <p>{{ errorInfo }}</p>
       </div>

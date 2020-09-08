@@ -3,7 +3,7 @@
     <div class="water-mark-container">
       <slot></slot>
     </div>
-    <div v-if="!!$scopedSlots.watermark || content" class="water-mark-list" ref="mark">
+    <div v-if="!!$slots.watermark || content" class="water-mark-list" ref="mark">
       <div
         class="water-mark-list-wrapper"
         :style="{
@@ -14,7 +14,7 @@
         <template v-if="content">
           <canvas ref="canvas" class="water-mark-canvas"></canvas>
         </template>
-        <template v-else-if="!!$scopedSlots.watermark">
+        <template v-else-if="!!$slots.watermark">
           <ul
             v-for="i in (repeatY ? repetition : 1)"
             class="water-mark-line"

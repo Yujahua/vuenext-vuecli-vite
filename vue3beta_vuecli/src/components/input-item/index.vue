@@ -17,7 +17,7 @@
     :title="title"
     :solid="solid && !isTitleLatent"
   >
-    <template slot="left">
+    <template v-slot:left>
       <slot name="left"></slot>
     </template>
     <!-- ------------ -->
@@ -62,7 +62,7 @@
       </div>
     </template>
 
-    <template slot="right">
+    <template v-slot:right>
       <!-- ------------ -->
       <!--  CLEART BTN  -->
       <!-- ------------ -->
@@ -81,7 +81,7 @@
       <slot name="right"></slot>
     </template>
 
-    <template slot="children">
+    <template v-slot:children>
       <!-- -------------------- -->
       <!-- BRIEF/ERROR TIP -->
       <!-- -------------------- -->

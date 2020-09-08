@@ -45,7 +45,7 @@
                   icon-inverse=""
                   icon-position="right"
                 >
-                  <template slot-scope="{ option }">
+                  <template v-slot="{ option }">
                     <slot :option="option"></slot>
                   </template>
                 </ui-radio-list>

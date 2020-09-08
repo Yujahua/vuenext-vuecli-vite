@@ -36,7 +36,7 @@
             v-on="$listeners"
           >
             <slot name="channel"></slot>
-            <template slot="button">
+            <template v-slot:button>
               <slot name="payButton"></slot>
             </template>
           </ui-cashier-channel>

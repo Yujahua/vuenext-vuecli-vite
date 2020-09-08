@@ -14,14 +14,14 @@
         :key="`steps-${index}`"
       >
         <!-- Customize uniformly -->
-        <div v-if="$scopedSlots.icon" class="icon-wrapper" >
+        <div v-if="$slots.icon" class="icon-wrapper" >
           <slot name="icon" :index="index" :current-index="currentLength"></slot>
         </div>
         <!-- Customize by status-->
         <div v-else class="icon-wrapper">
           <template v-if="index < currentLength">
             <slot
-              v-if="$scopedSlots.reached || $slots.reached"
+              v-if="$slots.reached || $slots.reached"
               name="reached"
               :index="index"
             ></slot>
@@ -31,7 +31,7 @@
           </template>
           <template v-else-if="index === currentLength">
             <slot
-              v-if="$scopedSlots.current || $slots.current"
+              v-if="$slots.current || $slots.current"
               name="current"
               :index="index"
             ></slot>
@@ -39,7 +39,7 @@
           </template>
           <template v-else>
             <slot
-              v-if="$scopedSlots.unreached || $slots.unreached"
+              v-if="$slots.unreached || $slots.unreached"
               name="unreached"
               :index="index"
             ></slot>
@@ -50,7 +50,7 @@
         </div>
         <div class="text-wrapper">
           <slot
-            v-if="$scopedSlots.content"
+            v-if="$slots.content"
             name="content"
             :index="index"
             :step="step"
