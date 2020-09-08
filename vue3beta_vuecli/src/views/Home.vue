@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {ref, onMounted, getCurrentInstance} from 'vue'
+import {ref, onMounted} from 'vue'
 import {useRouter} from 'vue-router'
 
 export default {
@@ -45,13 +45,6 @@ export default {
       homeName.value
         // .textillate()
         // .on('end.tlt')
-
-      const instance = getCurrentInstance();
-      
-      const proxy = instance.proxy;
-      const textillate = proxy.textillate;
-
-      console.dir(textillate)
 
       timeCount(() => {
         router.replace('/Category')

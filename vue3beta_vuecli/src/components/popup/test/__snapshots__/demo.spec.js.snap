@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popup - Demo Different positions 1`] = `
+<div class="ui-example-child ui-example-child-popup ui-example-child-popup-0">
+  <div class="ui-popup with-mask center" style="display:none;">
+    <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+    <div name="ui-fade" class="ui-popup-box ui-fade" style="display:none;">
+      <div class="ui-example-popup ui-example-popup-center">
+        Popup Center
+      </div>
+    </div>
+  </div>
+
+  ] <div class="ui-popup with-mask bottom" style="display:none;">
+    <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+    <div name="ui-slide-up" class="ui-popup-box ui-slide-up" style="display:none;">
+      <div class="ui-popup-title-bar title-align-center large">
+        <div class="title-bar-left ui-popup-cancel">cancel</div>
+        <div class="title-bar-title">
+          <p class="title">Popup Title</p>
+          <p class="describe">Popup Description</p>
+        </div>
+        <div class="title-bar-right ui-popup-confirm">ok</div>
+        <!---->
+      </div>
+      <div class="ui-example-popup ui-example-popup-bottom">
+        Popup Bottom
+      </div>
+    </div>
+  </div>
+  <div class="ui-popup top" style="display:none;">
+    <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+    <div name="ui-slide-down" class="ui-popup-box ui-slide-down" style="display:none;">
+      <div class="ui-example-popup ui-example-popup-top">
+        Popup Top
+        <ui-icon name="close"></ui-icon>
+      </div>
+    </div>
+  </div>
+  <div class="ui-popup with-mask left" style="display:none;">
+    <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+    <div name="ui-slide-right" class="ui-popup-box ui-slide-right" style="display:none;">
+      <div class="ui-example-popup ui-example-popup-left">
+        Popup Left
+      </div>
+    </div>
+  </div>
+  <div class="ui-popup with-mask right" style="display:none;">
+    <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+    <div name="ui-slide-left" class="ui-popup-box ui-slide-left" style="display:none;">
+      <div class="ui-example-popup ui-example-popup-right">
+        Popup Right
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Popup - Demo Other configurations 1`] = `
+<div class="ui-example-child ui-example-child-popup ui-example-child-popup-2">
+  <div class="ui-popup top" style="display:none;">
+    <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+    <div name="ui-slide-down" class="ui-popup-box ui-slide-down" style="display:none;">
+      <div class="ui-example-popup ui-example-popup-top">
+        Popup Top
+        <ui-icon name="close"></ui-icon>
+      </div>
+    </div>
+  </div>
+  <div class="ui-popup with-mask bottom" style="display:none;">
+    <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+    <div name="ui-slide-up" class="ui-popup-box ui-slide-up" style="display:none;">
+      <div class="ui-popup-title-bar title-align-center">
+        <div class="title-bar-left ui-popup-cancel">cancel</div>
+        <div class="title-bar-title">
+          <p class="title">Prevent Mask Click</p>
+          <!---->
+        </div>
+        <div class="title-bar-right ui-popup-confirm">ok</div>
+        <!---->
+      </div>
+      <div class="ui-example-popup ui-example-popup-bottom">
+        Popup Bottom
+      </div>
+    </div>
+  </div>
+</div>
+`;

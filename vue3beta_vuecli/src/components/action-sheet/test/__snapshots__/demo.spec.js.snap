@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionSheet Basic 1`] = `
+<div class="ui-example-child ui-example-child-action-sheet">
+  <div class="ui-action-sheet">
+    <div class="ui-popup inner-popup large-radius with-mask bottom" style="display:none;">
+      <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+      <div name="ui-slide-up" class="ui-popup-box ui-slide-up" style="display:none;">
+        <div class="ui-action-sheet-content">
+          <header class="ui-action-sheet-header">操作说明的标题</header>
+          <ul class="ui-action-sheet-list">
+            <li class="ui-action-sheet-item">
+              <div class="ui-action-sheet-item-wrapper">
+                <div class="ui-action-sheet-item-section">选项1</div>
+              </div>
+            </li>
+            <li class="active ui-action-sheet-item">
+              <div class="ui-action-sheet-item-wrapper">
+                <div class="ui-action-sheet-item-section">选项2</div>
+              </div>
+            </li>
+            <li class="disabled ui-action-sheet-item">
+              <div class="ui-action-sheet-item-wrapper">
+                <div class="ui-action-sheet-item-section">选项3</div>
+              </div>
+            </li>
+            <li class="ui-action-sheet-cancel">取消</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionSheet Singleton pattern 1`] = `
+<div class="ui-action-sheet">
+  <div class="ui-popup inner-popup large-radius with-mask bottom" style="">
+    <div class="ui-popup-mask" style=""></div>
+    <div class="ui-popup-box ui-slide-up" style="">
+      <div class="ui-action-sheet-content">
+        <header class="ui-action-sheet-header">操作说明的标题</header>
+        <ul class="ui-action-sheet-list">
+          <li class="ui-action-sheet-item">
+            <div class="ui-action-sheet-item-wrapper">
+              <div class="ui-action-sheet-item-section">选项1</div>
+            </div>
+          </li>
+          <li class="active ui-action-sheet-item">
+            <div class="ui-action-sheet-item-wrapper">
+              <div class="ui-action-sheet-item-section">选项2</div>
+            </div>
+          </li>
+          <li class="disabled ui-action-sheet-item">
+            <div class="ui-action-sheet-item-wrapper">
+              <div class="ui-action-sheet-item-section">选项3</div>
+            </div>
+          </li>
+          <li class="ui-action-sheet-cancel">取消</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

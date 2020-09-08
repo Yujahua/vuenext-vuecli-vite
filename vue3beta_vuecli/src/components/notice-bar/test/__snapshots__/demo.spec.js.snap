@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoticeBar - Demo Basic 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-0">
+  <div class="ui-notice-bar default">
+    <div class="ui-notice-bar-left ui-notice-bar-empty">
+      <!---->
+    </div>
+    <div class="ui-notice-bar-content">
+      <div>为了确保您的资金安全，请设置支付密码</div>
+    </div>
+    <div class="ui-notice-bar-right">
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar - Demo Customize 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-7">
+  <div class="ui-notice-bar default">
+    <div class="ui-notice-bar-left"><i class="ui-icon icon-font ui-notice-demo-icon ui-notice-demo-icon-left ui-icon-security security md" style="color:;"></i></div>
+    <div class="ui-notice-bar-content">
+      <div>
+        为了确保您的资金安全，请设置支付密码
+      </div>
+    </div>
+    <div class="ui-notice-bar-right">
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar - Demo Multi-line display 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-5">
+  <div class="ui-notice-bar default">
+    <div class="ui-notice-bar-left"><i class="ui-icon icon-font ui-notice-icon ui-icon-security security md" style="color:;"></i></div>
+    <div class="ui-notice-bar-content ui-notice-bar-multi-content">
+      <div>
+        为了确保您的资金安全，请设置支付密码。为了确保您的资金安全，请设置支付密码。为了确保您的资金安全，请设置支付密码。
+      </div>
+    </div>
+    <div class="ui-notice-bar-right"><i class="ui-icon icon-font ui-notice-icon ui-notice-icon-right ui-icon-arrow-right arrow-right md" style="color:;"></i></div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar - Demo Round 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-3">
+  <div class="ui-notice-bar ui-notice-bar-round default">
+    <div class="ui-notice-bar-left ui-notice-bar-empty">
+      <!---->
+    </div>
+    <div class="ui-notice-bar-content">
+      <div>为了确保您的资金安全，请设置支付密码</div>
+    </div>
+    <div class="ui-notice-bar-right">
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar - Demo Scroll play 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-6">
+  <div class="ui-notice-bar default">
+    <div class="ui-notice-bar-left"><i class="ui-icon icon-font ui-notice-icon ui-icon-volumn volumn md" style="color:;"></i></div>
+    <div class="ui-notice-bar-content">
+      <div>
+        为了确保您的资金安全，请设置支付密码为了确保您的资金安全，请设置支付密码为了确保您的资金安全，请设置支付密码
+      </div>
+    </div>
+    <div class="ui-notice-bar-right"><i class="ui-icon icon-font ui-notice-icon ui-notice-icon-right ui-icon-close close md" style="color:;"></i></div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar - Demo Setting dwell time 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-2">
+  <div class="ui-notice-bar default">
+    <div class="ui-notice-bar-left ui-notice-bar-empty">
+      <!---->
+    </div>
+    <div class="ui-notice-bar-content">
+      <div>为了确保您的资金安全，请设置支付密码</div>
+    </div>
+    <div class="ui-notice-bar-right">
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar - Demo Theme 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-4">
+  <div class="ui-notice-bar warning">
+    <div class="ui-notice-bar-left"><i class="ui-icon icon-font ui-notice-icon ui-icon-warn warn md" style="color:;"></i></div>
+    <div class="ui-notice-bar-content">
+      <div>
+        该银行3:00-12:00系统维护，请更换其他银行卡
+      </div>
+    </div>
+    <div class="ui-notice-bar-right"><i class="ui-icon icon-font ui-notice-icon ui-notice-icon-right ui-icon-close close md" style="color:;"></i></div>
+  </div>
+  <div class="ui-notice-bar activity" style="margin-top:10px;">
+    <div class="ui-notice-bar-left"><i class="ui-icon icon-font ui-notice-icon ui-icon-coupon coupon md" style="color:;"></i></div>
+    <div class="ui-notice-bar-content">
+      <div>
+        福利来啦，7日免息券发放中！
+      </div>
+    </div>
+    <div class="ui-notice-bar-right"><i class="ui-icon icon-font ui-notice-icon ui-notice-icon-right ui-icon-arrow-right arrow-right md" style="color:;"></i></div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar - Demo With icon 1`] = `
+<div class="ui-example-child ui-example-child-notice-bar ui-example-child-notice-bar-1">
+  <div class="ui-notice-bar default">
+    <div class="ui-notice-bar-left"><i class="ui-icon icon-font ui-notice-icon ui-icon-security security md" style="color:;"></i></div>
+    <div class="ui-notice-bar-content">
+      <div>
+        为了确保您的资金安全，请设置支付密码
+      </div>
+    </div>
+    <div class="ui-notice-bar-right"><i class="ui-icon icon-font ui-notice-icon ui-notice-icon-right ui-icon-close close md" style="color:;"></i></div>
+  </div>
+</div>
+`;

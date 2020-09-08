@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionBar Demo Basic 1`] = `
+<div class="ui-example-child ui-example-child-action-bar ui-example-child-0">
+  <div class="ui-action-bar">
+    <div class="ui-action-bar-container">
+      <!---->
+      <div class="ui-action-bar-group"><button type="button" class="ui-button ui-action-bar-button primary active block">
+          <div class="ui-button-inner">
+            <!---->
+            <div class="ui-button-content">
+              主要按钮
+            </div>
+          </div>
+        </button></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionBar Demo Multiple buttons 1`] = `
+<div class="ui-example-child ui-example-child-action-bar ui-example-child-0">
+  <div class="ui-action-bar">
+    <div class="ui-action-bar-container">
+      <!---->
+      <div class="ui-action-bar-group"><button type="button" class="ui-button ui-action-bar-button primary active block plain">
+          <div class="ui-button-inner">
+            <!---->
+            <div class="ui-button-content">
+              次要按钮
+            </div>
+          </div>
+        </button><button type="button" class="ui-button ui-action-bar-button primary active block">
+          <div class="ui-button-inner">
+            <!---->
+            <div class="ui-button-content">
+              主要按钮
+            </div>
+          </div>
+        </button></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionBar Demo Multiple buttons and disabled button 1`] = `
+<div class="ui-example-child ui-example-child-action-bar ui-example-child-1">
+  <div class="ui-action-bar">
+    <div class="ui-action-bar-container">
+      <!---->
+      <div class="ui-action-bar-group"><button type="button" disabled="disabled" class="ui-button ui-action-bar-button disabled active block plain">
+          <div class="ui-button-inner">
+            <!---->
+            <div class="ui-button-content">
+              次要按钮
+            </div>
+          </div>
+        </button><button type="button" disabled="disabled" class="ui-button ui-action-bar-button disabled active block">
+          <div class="ui-button-inner">
+            <!---->
+            <div class="ui-button-content">
+              主要按钮
+            </div>
+          </div>
+        </button></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ActionBar Demo With slot 1`] = `
+<div class="ui-example-child ui-example-child-action-bar ui-example-child-3">
+  <div class="ui-action-bar">
+    <div class="ui-action-bar-container">
+      <div class="ui-action-bar-text"><span class="price">¥128.00<small>起</small></span></div>
+      <div class="ui-action-bar-group"><button type="button" class="ui-button ui-action-bar-button primary active block">
+          <div class="ui-button-inner">
+            <!---->
+            <div class="ui-button-content">
+              主要按钮
+            </div>
+          </div>
+        </button></div>
+    </div>
+  </div>
+</div>
+`;

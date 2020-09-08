@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast - Demo Continuous call 1`] = `
+<div class="ui-toast center">
+  <div class="ui-popup with-mask center" style="">
+    <div class="ui-popup-mask" style=""></div>
+    <div class="ui-popup-box ui-fade" style="">
+      <div class="ui-toast-content"><svg class="ui-icon icon-svg ui-icon-spinner lg">
+          <use xlink:href="#spinner"></use>
+        </svg>
+        <div class="ui-toast-text">载入中</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast - Demo Continuous call 2`] = `
+<div class="ui-toast center">
+  <div class="ui-popup center" style="">
+    <div class="ui-popup-mask" style="display: none;"></div>
+    <div class="ui-popup-box ui-fade" style="">
+      <div class="ui-toast-content"><i class="ui-icon icon-font ui-icon-fail fail lg"></i>
+        <div class="ui-toast-text">载入失败</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast - Demo Customize location 1`] = `
+<div class="ui-toast bottom">
+  <div class="ui-popup center" style="">
+    <div class="ui-popup-mask" style="display: none;"></div>
+    <div class="ui-popup-box ui-fade" style="">
+      <div class="ui-toast-content">
+        <!---->
+        <div class="ui-toast-text">自定义位置</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast - Demo Failure 1`] = `
+<div class="ui-toast center">
+  <div class="ui-popup center" style="">
+    <div class="ui-popup-mask" style="display: none;"></div>
+    <div class="ui-popup-box ui-fade" style="">
+      <div class="ui-toast-content"><i class="ui-icon icon-font ui-icon-fail fail lg"></i>
+        <div class="ui-toast-text">操作失败</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast - Demo Loading 1`] = `
+<div class="ui-toast center">
+  <div class="ui-popup with-mask center" style="">
+    <div class="ui-popup-mask" style=""></div>
+    <div class="ui-popup-box ui-fade" style="">
+      <div class="ui-toast-content"><svg class="ui-icon icon-svg ui-icon-spinner lg">
+          <use xlink:href="#spinner"></use>
+        </svg>
+        <div class="ui-toast-text">加载中...</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast - Demo Plain text 1`] = `
+<div class="ui-toast center">
+  <div class="ui-popup center" style="">
+    <div class="ui-popup-mask" style="display: none;"></div>
+    <div class="ui-popup-box ui-fade" style="">
+      <div class="ui-toast-content">
+        <!---->
+        <div class="ui-toast-text">一段文字</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast - Demo Success 1`] = `
+<div class="ui-toast center">
+  <div class="ui-popup center" style="">
+    <div class="ui-popup-mask" style="display: none;"></div>
+    <div class="ui-popup-box ui-fade" style="">
+      <div class="ui-toast-content"><i class="ui-icon icon-font ui-icon-success success lg"></i>
+        <div class="ui-toast-text">操作成功</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

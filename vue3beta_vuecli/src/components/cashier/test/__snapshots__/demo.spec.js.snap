@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cashier - Demo Baisc-captcha 1`] = `
+<div class="ui-cashier">
+  <div class="ui-popup inner-popup with-mask bottom" style="">
+    <div class="ui-popup-mask" style="" name="ui-mask-fade"></div>
+    <div class="ui-popup-box ui-slide-up" style="" name="ui-slide-up">
+      <div class="ui-popup-title-bar title-align-center">
+        <!---->
+        <div class="title-bar-title">
+          <p class="title">支付</p>
+          <!---->
+        </div>
+        <!---->
+        <div class="title-bar-right ui-popup-close"><i class="ui-icon icon-font ui-icon-close close lg"></i></div>
+      </div>
+      <div class="ui-cashier-container">
+        <div class="ui-cashier-block ui-cashier-captcha">
+          <div class="ui-captcha">
+            <div class="ui-captcha-content">
+              <!---->
+              <div class="ui-captcha-message">
+                <div>Verification code sent to 156 **** 8965</div>
+              </div>
+            </div>
+            <div class="ui-codebox-wrapper">
+              <div class="ui-codebox is-justify"><span class="ui-codebox-box"><!----> <!----></span><span class="ui-codebox-box"><!----> <!----></span><span class="ui-codebox-box"><!----> <!----></span><span class="ui-codebox-box"><!----> <!----></span></div>
+              <footer class="ui-captcha-footer">
+                <div class="ui-captcha-brief">The latest verification code is still valid</div> <button class="ui-captcha-btn">Send Verification code</button>
+              </footer>
+              <form action="" style="display: none;"><input type="text" maxlength="4" class="ui-codebox-input"></form>
+              <div class="ui-number-keyboard ui-codebox-keyboard in-view">
+                <!---->
+                <div class="ui-number-keyboard-container simple">
+                  <div class="keyboard-number">
+                    <ul class="keyboard-number-list">
+                      <li class="keyboard-number-item"><span>1</span></li>
+                      <li class="keyboard-number-item"><span>2</span></li>
+                      <li class="keyboard-number-item"><span>3</span></li>
+                      <li class="keyboard-number-item"><span>4</span></li>
+                      <li class="keyboard-number-item"><span>5</span></li>
+                      <li class="keyboard-number-item"><span>6</span></li>
+                      <li class="keyboard-number-item"><span>7</span></li>
+                      <li class="keyboard-number-item"><span>8</span></li>
+                      <li class="keyboard-number-item"><span>9</span></li>
+                      <li class="keyboard-number-item no-bg"></li>
+                      <li class="keyboard-number-item"><span>0</span></li>
+                      <li class="keyboard-number-item no-bg delete"><span></span></li>
+                    </ul>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cashier - Demo Baisc-channel 1`] = `
+<div class="ui-example-child ui-example-child-cashier">
+  <div class="ui-cashier">
+    <div class="ui-popup inner-popup with-mask bottom" style="display:none;">
+      <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+      <div name="ui-slide-up" class="ui-popup-box ui-slide-up" style="display:none;">
+        <div class="ui-popup-title-bar title-align-center">
+          <!---->
+          <div class="title-bar-title">
+            <p class="title">支付</p>
+            <!---->
+          </div>
+          <!---->
+          <div class="title-bar-right ui-popup-close"><i class="ui-icon icon-font ui-icon-close close lg" style="color:;"></i></div>
+        </div>
+        <div class="ui-cashier-container">
+          <div class="ui-cashier-block ui-cashier-choose">
+            <div class="ui-cashier-channel">
+              <div class="choose-text">
+                <p class="choose-title">支付金额(元)</p>
+                <p class="choose-number">100.00</p>
+                <p class="choose-describe">关于支付金额的特殊说明</p>
+              </div>
+              <div class="choose-channel">
+                <div class="choose-channel-list">
+                  <div class="ui-cashier-channel-item default">
+                    <div class="item-icon cashier-icon-1"><i class="ui-icon icon-font ui-icon-cashier-icon-1 cashier-icon-1 lg" style="color:;"></i></div>
+                    <div class="item-label">
+                      <p class="title"><span>招商银行(0056)</span>
+                        <!---->
+                      </p>
+                      <!---->
+                    </div>
+                    <div class="item-check-icon"><i class="ui-icon icon-font ui-icon-checked checked md" style="color:;"></i></div>
+                  </div>
+                </div>
+                <div class="choose-channel-more">更多支付方式</div>
+              </div>
+              <div class="ui-cashier-block-btn"><button type="button" class="ui-button ui-cashier-pay-button primary active block">
+                  <div class="ui-button-inner">
+                    <!---->
+                    <div class="ui-button-content">确定支付</div>
+                  </div>
+                </button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cashier - Demo Baisc-fail 1`] = `
+<div class="ui-cashier">
+  <div class="ui-popup inner-popup with-mask bottom" style="">
+    <div class="ui-popup-mask" style="" name="ui-mask-fade"></div>
+    <div class="ui-popup-box ui-slide-up" style="" name="ui-slide-up">
+      <div class="ui-popup-title-bar title-align-center">
+        <!---->
+        <div class="title-bar-title">
+          <p class="title">支付</p>
+          <!---->
+        </div>
+        <!---->
+        <div class="title-bar-right ui-popup-close"><i class="ui-icon icon-font ui-icon-close close lg"></i></div>
+      </div>
+      <div class="ui-cashier-container">
+        <div class="ui-cashier-block ui-cashier-fail">
+          <div class="ui-cashier-block-icon"><svg class="ui-icon icon-svg ui-icon-warn-color md">
+              <use xlink:href="#warn-color"></use>
+            </svg></div>
+          <div class="ui-cashier-block-text">支付失败，请稍后重试</div>
+          <div class="ui-cashier-block-btn"><button type="button" class="ui-button primary active block">好的</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cashier - Demo Baisc-success 1`] = `
+<div class="ui-cashier">
+  <div class="ui-popup inner-popup with-mask bottom" style="">
+    <div class="ui-popup-mask" style="" name="ui-mask-fade"></div>
+    <div class="ui-popup-box ui-slide-up" style="" name="ui-slide-up">
+      <div class="ui-popup-title-bar title-align-center">
+        <!---->
+        <div class="title-bar-title">
+          <p class="title">支付</p>
+          <!---->
+        </div>
+        <!---->
+        <div class="title-bar-right ui-popup-close"><i class="ui-icon icon-font ui-icon-close close lg"></i></div>
+      </div>
+      <div class="ui-cashier-container">
+        <div class="ui-cashier-block ui-cashier-success">
+          <div class="ui-cashier-block-icon">
+            <div class="ui-activity-indicator-rolling-success">
+              <div class="ui-activity-indicator-rolling" radius="35">
+                <div class="rolling-container"><svg viewBox="0 0 78.75 78.75" preserveAspectRatio="xMidYMid" class="ui-activity-indicator-svg rolling" style="width: 70px; height: 70px; transform: rotateZ(0deg);">
+                    <circle fill="none" stroke="transparent" stroke-width="4.375" cx="39.375" cy="39.375" r="35"></circle>
+                    <g name="circle">
+                      <circle cx="39.375" cy="39.375" fill="#FFF6F1" stroke="none" r="35" class="success"></circle>
+                    </g>
+                  </svg>
+                  <div class="content"> <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="right" style="transform: translate(-50%, -50%) scale(1);">
+                      <g>
+                        <line x1="32" y1="47" x2="45" y2="62" stroke-dasharray="20" style="stroke-width: 4.375; stroke: #2F86F6;"></line>
+                        <line x1="42" y1="62" x2="68.4" y2="40" stroke-dasharray="35" style="stroke-width: 4.375; stroke: #2F86F6;"></line>
+                      </g>
+                    </svg></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui-cashier-block-text">支付成功</div>
+          <div class="ui-cashier-block-btn"><button type="button" class="ui-button primary active block">好的</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Cashier - Demo Using slots and other configurations 1`] = `
+<div class="ui-example-child ui-example-child-cashier">
+  <div class="ui-cashier">
+    <div class="ui-popup inner-popup with-mask bottom" style="display:none;">
+      <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+      <div name="ui-slide-up" class="ui-popup-box ui-slide-up" style="display:none;">
+        <div class="ui-popup-title-bar title-align-center">
+          <!---->
+          <div class="title-bar-title">
+            <p class="title">支付</p>
+            <!---->
+          </div>
+          <!---->
+          <div class="title-bar-right ui-popup-close"><i class="ui-icon icon-font ui-icon-close close lg" style="color:;"></i></div>
+        </div>
+        <div class="ui-cashier-container">
+          <div>
+            <div class="ui-notice-bar warning">
+              <div class="ui-notice-bar-left"><i class="ui-icon icon-font ui-notice-icon ui-icon-warn warn md" style="color:;"></i></div>
+              <div class="ui-notice-bar-content">
+                <div>
+                  该银行3:00-12:00系统维护，请更换其他银行卡
+                </div>
+              </div>
+              <div class="ui-notice-bar-right"><i class="ui-icon icon-font ui-notice-icon ui-notice-icon-right ui-icon-close close md" style="color:;"></i></div>
+            </div>
+          </div>
+          <div class="ui-cashier-block ui-cashier-choose">
+            <div class="ui-cashier-channel">
+              <div class="choose-text">
+                <p class="choose-title">支付金额(元)</p>
+                <p class="choose-number">100.00</p>
+                <p class="choose-describe">关于支付金额的特殊说明</p>
+              </div>
+              <div class="choose-channel">
+                <div class="choose-channel-list">
+                  <div class="ui-cashier-channel-item default">
+                    <div class="item-icon cashier-icon-1"><i class="ui-icon icon-font ui-icon-cashier-icon-1 cashier-icon-1 lg" style="color:;"></i></div>
+                    <div class="item-label">
+                      <p class="title"><span>XX银行(1234)</span> <span class="title-active">更换</span></p>
+                      <p class="desc">当前银行维护中</p>
+                    </div>
+                    <div class="item-check-icon"><i class="ui-icon icon-font ui-icon-check-disabled check-disabled md" style="color:;"></i></div>
+                  </div>
+                </div>
+                <!---->
+              </div>
+              <div class="ui-cashier-block-btn"><button type="button" class="ui-button ui-cashier-pay-button primary active block">
+                  <div class="ui-button-inner">
+                    <!---->
+                    <div class="ui-button-content">确定支付</div>
+                  </div>
+                </button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

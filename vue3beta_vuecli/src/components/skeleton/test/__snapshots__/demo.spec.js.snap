@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton - Demo basic 1`] = `
+<div class="ui-example">
+  <div class="ui-skeleton">
+    <!---->
+    <div class="ui-skeleton-content">
+      <h4 class="ui-skeleton-title" style="width:40%;"></h4>
+      <div class="ui-skeleton-row" style="width:100%;"></div>
+      <div class="ui-skeleton-row" style="width:100%;"></div>
+      <div class="ui-skeleton-row" style="width:60%;"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Skeleton - Demo combineSkeleton 1`] = `
+<div class="ui-example">
+  <div class="ui-skeleton">
+    <!---->
+    <div class="ui-skeleton-content">
+      <h4 class="ui-skeleton-title" style="width:36%;"></h4>
+      <div class="ui-skeleton-row" style="width:40%;"></div>
+      <div class="ui-skeleton-row" style="width:56%;"></div>
+      <div class="ui-skeleton-row" style="width:72%;"></div>
+      <div class="ui-skeleton-row" style="width:60%;"></div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Skeleton - Demo defaultSkeleton 1`] = `
+<div class="ui-example">
+  <div>
+    <h4></h4>
+  </div>
+</div>
+`;
+
+exports[`Skeleton - Demo switchSkeleton 1`] = `
+<div class="ui-example">
+  <div class="ui-switch skeleton-switch active"></div>
+  <fieldset class="ui-field">
+    <!---->
+    <div class="ui-field-content">
+      <div class="ui-skeleton skeleton-item">
+        <div class="ui-skeleton-avatar"></div>
+        <div class="ui-skeleton-content">
+          <h4 class="ui-skeleton-title" style="width:40%;"></h4>
+          <div class="ui-skeleton-row" style="width:100%;"></div>
+          <div class="ui-skeleton-row" style="width:60%;"></div>
+        </div>
+      </div>
+      <div class="ui-skeleton skeleton-item">
+        <div class="ui-skeleton-avatar"></div>
+        <div class="ui-skeleton-content">
+          <h4 class="ui-skeleton-title" style="width:40%;"></h4>
+          <div class="ui-skeleton-row" style="width:100%;"></div>
+          <div class="ui-skeleton-row" style="width:60%;"></div>
+        </div>
+      </div>
+    </div>
+    <!---->
+  </fieldset>
+</div>
+`;
+
+exports[`Skeleton - Demo withAvatar 1`] = `
+<div class="ui-example">
+  <div class="ui-skeleton">
+    <div class="ui-skeleton-avatar"></div>
+    <div class="ui-skeleton-content">
+      <h4 class="ui-skeleton-title" style="width:40%;"></h4>
+      <div class="ui-skeleton-row" style="width:100%;"></div>
+      <div class="ui-skeleton-row" style="width:100%;"></div>
+      <div class="ui-skeleton-row" style="width:60%;"></div>
+    </div>
+  </div>
+</div>
+`;

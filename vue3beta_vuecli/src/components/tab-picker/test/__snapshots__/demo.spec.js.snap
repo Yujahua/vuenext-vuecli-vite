@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabPicker - Demo Basic 1`] = `
+<div class="ui-example-child ui-example-child-tab-picker ui-example-child-tab-picker-0">
+  <div class="ui-tab-picker">
+    <div class="ui-popup with-mask bottom" style="display:none;">
+      <div name="ui-mask-fade" class="ui-popup-mask" style="display:none;"></div>
+      <div name="ui-slide-up" class="ui-popup-box ui-slide-up" style="display:none;">
+        <div class="ui-popup-title-bar title-align-center large">
+          <!---->
+          <div class="title-bar-title">
+            <p class="title">请选择</p>
+            <p class="describe">请选择您所在的省份、城市、区县</p>
+          </div>
+          <!---->
+          <div class="title-bar-right ui-popup-close"><i class="ui-icon icon-font ui-icon-close close lg" style="color:;"></i></div>
+        </div>
+        <div class="ui-tab-picker-content">
+          <div class="ui-tabs">
+            <nav class="ui-tab-bar">
+              <div class="ui-tab-bar-inner">
+                <!---->
+                <div class="ui-scroll-view">
+                  <!---->
+                  <div class="scroll-view-container">
+                    <!---->
+                    <div class="ui-tab-bar-list" style="width:0px;"></div> <span class="ui-tab-bar-ink" style="width:0px;transform:translateX(0px);"></span>
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </nav>
+            <div class="ui-tabs-content">
+              <div class="ui-scroll-view">
+                <!---->
+                <div class="scroll-view-container">
+                  <!---->
+                  <div role="tabpanel" tab="province" name="ui-tab-slide-left" class="ui-tab-pane">
+                    <div class="ui-radio-list">
+                      <div class="ui-cell-item ui-radio-item">
+                        <div class="ui-cell-item-body">
+                          <!---->
+                          <div class="ui-cell-item-content">
+                            <p class="ui-cell-item-title">北京市</p>
+                            <!---->
+                          </div>
+                          <div class="ui-cell-item-right"><label class="ui-radio">
+                              <div class="ui-radio-icon">
+                                <!---->
+                              </div>
+                              <!---->
+                            </label>
+                            <!---->
+                          </div>
+                        </div>
+                        <!---->
+                      </div>
+                      <div class="ui-cell-item ui-radio-item no-border">
+                        <div class="ui-cell-item-body">
+                          <!---->
+                          <div class="ui-cell-item-content">
+                            <p class="ui-cell-item-title">四川省</p>
+                            <!---->
+                          </div>
+                          <div class="ui-cell-item-right"><label class="ui-radio">
+                              <div class="ui-radio-icon">
+                                <!---->
+                              </div>
+                              <!---->
+                            </label>
+                            <!---->
+                          </div>
+                        </div>
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

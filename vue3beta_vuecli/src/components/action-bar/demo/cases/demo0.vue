@@ -1,0 +1,34 @@
+<template>
+  <div class="ui-example-child ui-example-child-action-bar ui-example-child-0">
+    <ui-action-bar :actions="data"></ui-action-bar>
+  </div>
+</template>
+
+<script>import {ActionBar, Toast} from '@csii/vx-mobile'
+import {reactive} from '@vue/composition-api'
+
+export default {
+  name: 'action-bar-demo',
+  /* DELETE */
+  height: 150,
+  /* DELETE */
+  components: {
+    [ActionBar.name]: ActionBar,
+  },
+  setup() {
+    const handleClick = () => {
+      Toast.succeed('Click')
+    }
+    let data = reactive([
+      {
+        text: '主要按钮',
+        onClick: handleClick,
+      },
+    ])
+    return {
+      handleClick,
+      data,
+    }
+  },
+}
+</script>

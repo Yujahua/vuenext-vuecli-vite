@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch - Demo Closed 1`] = `
+<div class="ui-example-child ui-example-child-switch ui-example-child-switch-1">
+  <div class="ui-switch"></div>
+</div>
+`;
+
+exports[`Switch - Demo Closed and disabled 1`] = `
+<div class="ui-example-child ui-example-child-switch ui-example-child-switch-3">
+  <div class="ui-switch disabled"></div>
+</div>
+`;
+
+exports[`Switch - Demo Open 1`] = `
+<div class="ui-example-child ui-example-child-switch ui-example-child-switch-0">
+  <div class="ui-switch active"></div>
+</div>
+`;
+
+exports[`Switch - Demo Open and disabled 1`] = `
+<div class="ui-example-child ui-example-child-switch ui-example-child-switch-2">
+  <div class="ui-switch disabled active"></div>
+</div>
+`;
