@@ -47,7 +47,7 @@ export default {
         // .on('end.tlt')
 
       timeCount(() => {
-        router.replace('/Category')
+        router.replace('/category')
       })
     })
 
