@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import ToastOptions from './toast'
-console.log(ToastOptions, 'ToastOptions')
 /**
  * Toast factory
  *

@@ -5,11 +5,9 @@
     </template>
     <template v-else>
       <div class="ui-nav">
-        <router-link to="/category">
-          <p class="home">
-            <ui-icon name="home" size="lg"></ui-icon>
-          </p>
-        </router-link>
+        <p class="home" @click="goToCategory">
+          <ui-icon name="home" size="lg"></ui-icon>
+        </p>
         <p class="name" v-text="navTitle"></p>
         <p class="name-zh" v-text="navSubTitle"></p>
       </div>
@@ -22,8 +20,15 @@
 
 <script>
 import {computed} from 'vue'
-import {useRoute} from 'vue-router'
-// router by useRouter fn, route by useRoute fn.
+// router injected by useRouter fn, route injected by useRoute fn.
+import {useRoute, useRouter} from 'vue-router'
+
+// Attention: store injected by useStore fn, the usage of store is the same as before,
+// if you'll use them, the notes below is a case. Before you uncomment them, you'd better
+// read the notes for ./main.js at first.
+
+// import {useStore} from 'vuex'
+
 
 import Icon from './components/icon'
 import './assets/responsive'
@@ -34,6 +39,8 @@ export default {
   },
   setup() {
     const route = useRoute();
+    const router = useRouter();
+    // const store = useStore();
 
     const navTitle = computed(() => route.name);
     const navSubTitle = computed(() => route.meta.description);
@@ -41,11 +48,16 @@ export default {
       const path = route.path
       return path === '/' || path === '/home' || path === '/category'
     });
+    const goToCategory = () => router.push('/category');
+
+    // const count = store.state.count;
 
     return {
       navTitle,
       navSubTitle,
-      isHome
+      isHome,
+      goToCategory,
+      // count
     }
   }
 }

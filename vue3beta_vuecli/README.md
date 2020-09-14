@@ -28,7 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Project Core Dependencies：
 - [vue-router-next](https://github.com/vuejs/vue-router-next): vue 3 router
 
-- [vuex](https://github.com/vuejs/vuex): import not yet
+- [vuex 4](https://github.com/vuejs/vuex/tree/dev/examples): vue 3 vuex
 
 ## Project Test Dependencies
 
@@ -36,16 +36,24 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
     `npm install jest -g` install jest global，run command `jest --init`
 
-- [@vue/test-utils @vue/server-test-utils](https://github.com/vuejs/vue-test-utils): vue testing
+- [@vue/test-utils @vue/server-test-utils](https://github.com/vuejs/vue-test-utils): vue 2 testing, maybe vue 3 is not supported yet.
 
 
-- [sinon](https://github.com/sinonjs/sinon): testing decoupling tool
+- [sinon](https://github.com/sinonjs/sinon): testing decoupling tool(解耦工具)
 
 ## Project dev use
 
 - [stylus](https://stylus.bootcss.com/): css preprocessor
 
     `npm i stylus stylus-loader --save-dev`
+
+- [vue-cli](https://github.com/vuejs/vue-cli/tree/next): next tag
+
+- [vue-cli-plugin-vue-next](https://github.com/vuejs/vue-cli-plugin-vue-next): cli-next, maybe has bugs.
+
+- [vue-next-webpack-preview](https://github.com/vuejs/vue-next-webpack-preview): may be used to test out Vue 3 with Vuex 4
+
+- [webpack](https://github.com/webpack/webpack)
 
 ## Npm links
 
@@ -78,3 +86,7 @@ provide dev install below（Non-finicial，just for private studing）
 npm i vue-loader-v16
 ```
 > At last: I hear that all the issues caused by npm, it's low version made it，so I delete my v16 dependency in the project，upgrade npm version to the newest release，updete modules，and this time run server is ok.
+
+## Issues
+
+> @vue/server-test-utils@1.0.4, @vue/test-utils@1.0.4 requires a peer of vue-server-renderer@2.x, maybe the upgrade is going on.
