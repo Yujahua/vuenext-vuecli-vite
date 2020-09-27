@@ -2,11 +2,13 @@
   "name": "vue3betavuecli",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/csii-vx-mobile.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "jest"
+    "test": "jest",
+    "build:@csii/vx-mobile": "vue-cli-service build --target lib --name csii-vx-mobile"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -23,6 +25,7 @@
     "@vue/server-test-utils": "^1.0.4",
     "@vue/test-utils": "^1.0.4",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "jest": "^26.4.2",

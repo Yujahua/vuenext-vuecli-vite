@@ -17,7 +17,10 @@ module.exports = () => {
   }
 
   if (process.env.NODE_ENV !== 'production' || process.env.BUILD_TYPE === 'example') {
-    plugins['postcss-pxtorem'] = { rootValue: 100, minPixelValue: 2, propWhiteList: [] }
+    plugins['postcss-pxtorem'] = { 
+      rootValue: 100, // 结果为：设计稿元素尺寸/100
+      minPixelValue: 2, 
+      propWhiteList: [] }
   }
 
   return {

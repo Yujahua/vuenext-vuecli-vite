@@ -1,6 +1,11 @@
 const path = require('path')
 
 module.exports = {
+    pages: {
+        index: {
+            entry: 'src/components/index.js'
+        }
+    },
     devServer: {
         // host: '0.0.0.0',     // default
         // port: 8080           // default
@@ -29,4 +34,6 @@ module.exports = {
         }
     },
     // publicPath: '/'         // default
+    outputDir: 'lib',          // default: dist
+    productionSourceMap: false
 }
