@@ -22,13 +22,11 @@
 import {computed} from 'vue'
 // router injected by useRouter fn, route injected by useRoute fn.
 import {useRoute, useRouter} from 'vue-router'
-
 // Attention: store injected by useStore fn, the usage of store is the same as before,
 // if you'll use them, the notes below is a case. Before you uncomment them, you'd better
 // read the notes for ./main.js at first.
 
 // import {useStore} from 'vuex'
-
 
 import Icon from './components/icon'
 import './assets/responsive'

@@ -7,7 +7,8 @@
   </div>
 </template>
 
-<script>import {Button} from '@csii/vx-mobile'
+<script>
+import {Button} from '../../../index'
 
 export default {
   name: 'button-demo',
@@ -19,5 +20,6 @@ export default {
     [Button.name]: Button,
   },
 }
-</script>
+
+</script>
 

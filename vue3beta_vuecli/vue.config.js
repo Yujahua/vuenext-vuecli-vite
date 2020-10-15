@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
     pages: {
         index: {
-            entry: 'src/components/index.js'
+            entry: './src/components/index.js'
         }
     },
     devServer: {
@@ -34,6 +34,24 @@ module.exports = {
         }
     },
     // publicPath: '/'         // default
-    outputDir: 'lib',          // default: dist
-    productionSourceMap: false
+    // outputDir: 'lib',          // default: dist
+    productionSourceMap: false,
+    configureWebpack: config => {   // todo after vue.cofing settings
+        if (process.env.NODE_ENV === 'production') {
+          // 为生产环境修改配置...
+        } else {
+          // 为开发环境修改配置...
+        }
+    },
+    // chainWebpack: config => {
+    //     config.module
+    //       .rule('vue')
+    //       .use('vue-loader-v16')
+    //         .loader('vue-loader-v16')
+    //         .tap(options => {
+    //           // 修改它的选项...
+    //           return options
+    //         })
+    //         .end()
+    //   }
 }

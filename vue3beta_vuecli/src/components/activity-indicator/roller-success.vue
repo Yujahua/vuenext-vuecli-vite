@@ -48,7 +48,8 @@
   </div>
 </template>
 
-<script>import {ref, computed, watch, onMounted} from '@vue/composition-api'
+<script>
+import {ref, computed, watch, onMounted} from 'vue'
 import Roller from './roller'
 
 export default {
@@ -115,54 +116,9 @@ export default {
       doSuccess,
     }
   },
-  // data() {
-  //   return {
-  //     animating: false,
-  //     startTmp: Date.now(),
-  //     successFlag: false
-  //   };
-  // },
-
-  // computed: {
-  //   strokeWidth() {
-  //     return this.size / 16;
-  //   },
-  //   radius() {
-  //     return this.size / 2;
-  //   },
-  //   viewBoxSize() {
-  //     return this.size + 2 * this.strokeWidth;
-  //   }
-  // },
-
-  // watch: {
-  //   isSuccess(val) {
-  //     if (val) {
-  //       this.doSuccess();
-  //     } else {
-  //       this.startTmp = Date.now();
-  //       this.successFlag = false;
-  //     }
-  //   }
-  // },
-
-  // mounted() {
-  //   this.isSuccess && this.doSuccess();
-  // },
-
-  // methods: {
-  //   doSuccess() {
-  //     const st = this.startTmp;
-  //     const et = Date.now();
-  //     const delay = Math.ceil((et - st) / 1500) * 1500 - (et - st);
-  //     setTimeout(() => {
-  //       /* istanbul ignore next */
-  //       this.successFlag = true;
-  //     }, delay);
-  //   }
-  // }
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-activity-indicator-rolling-success {

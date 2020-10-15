@@ -18,7 +18,8 @@
   </div>
 </template>
 
-<script>import {ref, computed} from '@vue/composition-api'
+<script>
+import {ref, computed} from 'vue'
 import CarouselCircle from './carousel-circle'
 
 export default {
@@ -44,7 +45,7 @@ export default {
       [0.6, 0.8, 1, 0.8, 0.6, 0.6, 0.6],
       [0.6, 0.6, 0.6, 0.8, 1, 0.8, 0.6],
     ])
-    const viewWidth = computed(props => {
+    const viewWidth = computed(() => {
       const len = circleAnimateValues.value.length
       return len * props.size + (len - 1) * props.size / 2
     })
@@ -57,7 +58,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-activity-indicator-carousel

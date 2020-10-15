@@ -1,5 +1,3 @@
-// language, basic function of language
-
 /* istanbul ignore file */
 import {inBrowser} from './env'
 
@@ -121,4 +119,3 @@ export function throttle(fn = noop, interval = 300) {
     }
   }
 }
-

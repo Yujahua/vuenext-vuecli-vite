@@ -19,7 +19,8 @@
   </circle>
 </template>
 
-<script>import {computed} from '@vue/composition-api'
+<script>
+import {computed} from 'vue'
 
 export default {
   name: 'ui-activity-indicator-carousel-circle',
@@ -53,4 +54,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

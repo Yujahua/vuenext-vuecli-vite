@@ -39,7 +39,8 @@
   </div>
 </template>
 
-<script>import Roller from './roller'
+<script>
+import Roller from './roller'
 import Spinner from './spinner'
 import Carousel from './carousel'
 
@@ -66,8 +67,8 @@ export default {
     },
     color: {
       type: String,
-      default() {
-        if (this.type === 'spinner') {
+      default({type}) {
+        if (type === 'spinner') {
           return 'dark'
         } else {
           return '#2F86F6'
@@ -87,7 +88,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-activity-indicator

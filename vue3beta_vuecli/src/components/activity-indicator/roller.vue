@@ -64,7 +64,8 @@
   </div>
 </template>
 
-<script>import {computed} from '@vue/composition-api'
+<script>
+import {computed} from 'vue'
 export default {
   name: 'ui-activity-indicator-rolling',
 
@@ -127,7 +128,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-activity-indicator-rolling

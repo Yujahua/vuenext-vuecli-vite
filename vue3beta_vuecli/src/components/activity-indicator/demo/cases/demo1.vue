@@ -17,16 +17,21 @@
 	</div>
 </template>
 
-<script>import {ActivityIndicator} from '@csii/vx-mobile'
+<script>
+// import {ActivityIndicator} from '@csii/vx-mobile'
+import {ActivityIndicator} from '../../../index'
 
 export default {
   name: 'activity-indicator-demo',
+  /* DELETE */
   title: 'Spinner',
+  /* DELETE */
   components: {
     [ActivityIndicator.name]: ActivityIndicator,
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-ui-activity-indicator-1

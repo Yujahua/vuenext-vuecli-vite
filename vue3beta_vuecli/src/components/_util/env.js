@@ -1,5 +1,3 @@
-// environment information
-
 // import Vue from 'vue'
 
 // Development environment

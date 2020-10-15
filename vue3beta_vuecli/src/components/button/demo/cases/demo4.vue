@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script>import {Button, Icon} from '@csii/vx-mobile'
+<script>
+import {Button, Icon} from '../../../index'
 
 export default {
   name: 'button-demo',
@@ -19,7 +20,8 @@ export default {
     [Icon.name]: Icon,
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .ui-example-child-button-3

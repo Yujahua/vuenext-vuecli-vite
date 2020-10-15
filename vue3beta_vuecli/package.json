@@ -8,7 +8,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "jest",
-    "build:@csii/vx-mobile": "vue-cli-service build --target lib --name csii-vx-mobile"
+    "build:@csii/vx-mobile": "vue-cli-service build --target lib --name csii-vx-mobile",
+    "b": "npm run build:@csii/vx-mobile",
+    "clean": "rimraf ./lib",
+    "output": "vue inspect > output.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

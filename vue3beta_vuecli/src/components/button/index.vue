@@ -11,7 +11,6 @@
       size === 'small' ? 'small' : ''
     ]"
     :disabled="inactive || type === 'disabled'"
-    v-on="$listeners"
   >
     <div class="ui-button-inner">
       <template v-if="icon">
@@ -27,7 +26,8 @@
   </button>
 </template>
 
-<script>import ActivityIndicatorRolling from '../activity-indicator/roller'
+<script>
+import ActivityIndicatorRolling from '../activity-indicator/roller'
 
 import Icon from '../icon'
 
@@ -81,7 +81,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-button

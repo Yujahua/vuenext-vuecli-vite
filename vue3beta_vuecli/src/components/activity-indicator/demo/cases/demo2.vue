@@ -18,12 +18,16 @@
 	</div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
-import {ActivityIndicator, Button} from '@csii/vx-mobile'
+<script>
+import {ref} from 'vue'
+// import {ActivityIndicator} from '@csii/vx-mobile'
+import {ActivityIndicator, Button} from '../../../index'
 
 export default {
   name: 'activity-indicator-demo',
+  /* DELETE */
   title: 'Carousel',
+  /* DELETE */
   components: {
     [ActivityIndicator.name]: ActivityIndicator,
     [Button.name]: Button,
@@ -44,7 +48,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-ui-activity-indicator-2
