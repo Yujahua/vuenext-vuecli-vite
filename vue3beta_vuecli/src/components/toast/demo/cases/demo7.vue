@@ -12,7 +12,8 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
+<script>
+import {ref} from 'vue'
 import {Toast, Button, ActivityIndicator} from '@csii/vx-mobile'
 
 export default {
@@ -26,12 +27,6 @@ export default {
     [Button.name]: Button,
     [ActivityIndicator.name]: ActivityIndicator,
   },
-  data() {
-    return {
-      isShow: false,
-    }
-  },
-  methods: {},
   setup(props, {refs}) {
     let isShow = ref(false)
     const showTextToast = () => {
@@ -49,4 +44,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

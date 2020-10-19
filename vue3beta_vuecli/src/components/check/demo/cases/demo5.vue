@@ -10,7 +10,9 @@
   </div>
 </template>
 
-<script>import {Field, CheckList} from '@csii/vx-mobile'
+<script>
+import {Field, CheckList} from '@csii/vx-mobile'
+import {reactive, toRefs} from 'vue'
 
 export default {
   name: 'check-demo',
@@ -22,8 +24,8 @@ export default {
     [Field.name]: Field,
     [CheckList.name]: CheckList,
   },
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       favorites: ['apple'],
       fruits: [
         {value: 'watermelon', label: '西瓜', brief: '选项摘要描述'},
@@ -32,10 +34,14 @@ export default {
         {value: 'orange', label: '橙子', brief: '选项摘要描述'},
         {value: 'tomato', label: '西红柿', brief: '选项摘要描述', disabled: true},
       ],
+    })
+    return {
+      ...toRefs(state),
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
   .ui-example-child

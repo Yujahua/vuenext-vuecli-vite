@@ -19,7 +19,8 @@
   </fieldset>
 </template>
 
-<script>import {provide} from '@vue/composition-api'
+<script>
+import {provide} from 'vue'
 export default {
   name: 'ui-field',
 
@@ -45,7 +46,8 @@ export default {
     provide('rootField', props)
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-field

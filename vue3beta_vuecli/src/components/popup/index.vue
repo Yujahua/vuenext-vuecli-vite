@@ -35,7 +35,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs, onMounted} from '@vue/composition-api'
+<script>
+import {reactive, toRefs, onMounted, getCurrentInstance, watch} from 'vue'
 
 import Transition from '../transition'
 import popupMixin from './mixins'
@@ -98,33 +99,10 @@ export default {
     //   default: true,
     // },
   },
-  watch: {
-    value(val) {
-      /* istanbul ignore next */
-      if (val) {
-        if (this.isAnimation) {
-          setTimeout(() => {
-            this.showPopupBox()
-          }, 50)
-        } else {
-          this.showPopupBox()
-        }
-      } else {
-        this.hidePopupBox()
-      }
-    },
-    preventScrollExclude(val, oldVal) {
-      // remove old listener before add
-      /* istanbul ignore next */
-      this.preventScrollExcludeFunc(false, oldVal)
-      /* istanbul ignore next */
-      this.preventScrollExcludeFunc(true, val)
-    },
-  },
 
   setup(props, context) {
     // props  传入的props   context 类似于vue2.X中的vue实例对象（{attrs,slots,emit,root}）
-
+    const that = getCurrentInstance()
     const state = reactive({
       isPopupShow: false,
       // controle popup box
@@ -136,10 +114,8 @@ export default {
     // MARK: event handler
     const onPopupTransitionStart = () => {
       if (!state.isPopupBoxShow) {
-        context.emit('beforeHide')
         context.emit('before-hide')
       } else {
-        context.emit('beforeShow')
         context.emit('before-show')
       }
     }
@@ -170,7 +146,7 @@ export default {
       preventScrollExclude = preventScrollExclude || props.preventScrollExclude
       const excluder =
         preventScrollExclude && typeof preventScrollExclude === 'string'
-          ? context.root.$el.querySelector(preventScrollExclude)
+          ? that.$el.querySelector(preventScrollExclude)
           : preventScrollExclude
       // 改写 &&写法
       if (excluder) {
@@ -182,8 +158,8 @@ export default {
     }
     const preventScrollFunc = isBind => {
       const handler = isBind ? 'addEventListener' : 'removeEventListener'
-      const masker = context.root.$el.querySelector('.ui-popup-mask')
-      const boxer = context.root.$el.querySelector('.ui-popup-box')
+      const masker = that.$el.querySelector('.ui-popup-mask')
+      const boxer = that.$el.querySelector('.ui-popup-box')
       if (masker) {
         masker[handler]('touchmove', preventDefault, false)
       }
@@ -222,7 +198,7 @@ export default {
     const onPopupMaskClick = () => {
       if (props.maskClosable) {
         hidePopupBox()
-        context.emit('maskClick')
+        context.emit('mask-click')
       }
     }
     onMounted(() => {
@@ -230,7 +206,32 @@ export default {
         showPopupBox()
       }
     })
-
+    watch(
+      () => props.value,
+      val => {
+        if (val) {
+          if (state.isAnimation) {
+            setTimeout(() => {
+              showPopupBox()
+            }, 50)
+          } else {
+            showPopupBox()
+          }
+        } else {
+          hidePopupBox()
+        }
+      },
+    )
+    watch(
+      () => props.preventScrollExclude,
+      (val, oldVal) => {
+        // remove old listener before add
+        /* istanbul ignore next */
+        preventScrollExcludeFunc(false, oldVal)
+        /* istanbul ignore next */
+        preventScrollExcludeFunc(true, val)
+      },
+    )
     return {
       ...toRefs(state),
       showPopupBox,
@@ -245,7 +246,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-popup

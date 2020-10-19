@@ -11,17 +11,20 @@
       :isVertical='isVertical'
       :imageUrl='imageUrl'
       :imageAlign='imageAlign'
-      v-model:isDel='isDel'></ui-graphic-list>
+      :isDel.sync='isDel'></ui-graphic-list>
   </div>
 </template>
 
-<script>import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {reactive, toRefs} from 'vue'
 import {GraphicList} from '@csii/vx-mobile'
 
 export default {
   name: 'graphic-list-demo',
+  /* DELETE */
   title: '基本/Basic',
   describe: '基本/Basic',
+  /* DELETE */
   components: {
     [GraphicList.name]: GraphicList,
   },
@@ -57,6 +60,7 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang='stylus' scoped></style>

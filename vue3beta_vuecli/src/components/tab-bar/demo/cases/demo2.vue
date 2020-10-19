@@ -8,7 +8,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {reactive, toRefs} from 'vue'
 import {TabBar} from '@csii/vx-mobile'
 
 export default {
@@ -40,4 +41,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

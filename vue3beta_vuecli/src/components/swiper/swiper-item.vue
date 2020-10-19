@@ -11,7 +11,7 @@ export default {
   name: 'ui-swiper-item',
   setup(props, {parent}) {
     let swiperWidth = computed(() => (!parent.isVertical ? `${parent.dimension}px` : 'auto'))
-    let swiperHeight = computed(() => (!parent.isVertical ? `${parent.dimension}px` : 'auto'))
+    let swiperHeight = computed(() => (parent.isVertical ? `${parent.dimension}px` : 'auto'))
     let that = getCurrentInstance()
     onMounted(() => parent && parent.swiperItemCreated(that))
     onUnmounted(() => parent && parent.swiperItemDestroyed(that))

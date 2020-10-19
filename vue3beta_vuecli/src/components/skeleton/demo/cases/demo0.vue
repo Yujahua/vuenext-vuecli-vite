@@ -5,8 +5,9 @@
   </div>
 </template>
 
-<script>import {Skeleton} from '@csii/vx-mobile'
-import {ref} from '@vue/composition-api'
+<script>
+import {Skeleton} from '@csii/vx-mobile'
+import {ref} from 'vue'
 export default {
   name: 'skeleton-demo',
   setup() {
@@ -19,7 +20,8 @@ export default {
     [Skeleton.name]: Skeleton,
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .ui-example-child-skeleton-0

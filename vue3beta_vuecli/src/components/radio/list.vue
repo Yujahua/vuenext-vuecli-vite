@@ -47,7 +47,8 @@
   </div>
 </template>
 
-<script>import {ref, computed, watch, watchEffect} from '@vue/composition-api'
+<script>
+import {ref, computed, watch, watchEffect} from 'vue'
 import Radio from './index'
 import Field from '../field'
 import CellItem from '../cell-item'
@@ -178,7 +179,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-radio-item

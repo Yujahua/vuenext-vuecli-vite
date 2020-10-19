@@ -10,7 +10,7 @@
         :max-height="100"
         placeholder="描述信息在100字以内"
       >
-        <template v-slot:footer>
+        <template slot="footer">
           <p class="demo2__footer">
             <span
               class="demo2__footer-left"

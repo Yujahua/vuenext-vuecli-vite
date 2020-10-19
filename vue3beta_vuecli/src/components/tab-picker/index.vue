@@ -35,7 +35,7 @@
                 :key="pane.name"
                 :name="pane.name"
                 :label="pane.label"
-              >
+            >
                 <ui-radio-list
                   :value="pane.value"
                   :options="pane.options"
@@ -45,7 +45,7 @@
                   icon-inverse=""
                   icon-position="right"
                 >
-                  <template v-slot="{ option }">
+                  <template slot-scope="{ option }">
                     <slot :option="option"></slot>
                   </template>
                 </ui-radio-list>
@@ -57,7 +57,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs, computed, nextTick} from '@vue/composition-api'
+<script>
+import {reactive, toRefs, computed, nextTick} from 'vue'
 import Popup from '../popup'
 import PopupTitlebar from '../popup/title-bar'
 import popupMixin from '../popup/mixins'
@@ -66,7 +67,7 @@ import Icon from '../icon'
 import Tabs from '../tabs'
 import TabPane from '../tab-pane'
 import RadioList from '../radio-list'
-// import ScrollView from '../scroll-view' // ScrollView未升级
+import ScrollView from '../scroll-view'
 import {extend} from '../_util'
 
 export default {
@@ -81,7 +82,7 @@ export default {
     [Tabs.name]: Tabs,
     [TabPane.name]: TabPane,
     [RadioList.name]: RadioList,
-    // [ScrollView.name]: ScrollView,
+    [ScrollView.name]: ScrollView,
   },
 
   props: {
@@ -125,7 +126,7 @@ export default {
       tabsTmpKey: Date.now(),
     })
     const panes = computed(() => {
-      const panes = []
+      const panesDate = []
       let target = props.data
       let cursor = 0
       while (target && target.name) {
@@ -150,10 +151,10 @@ export default {
         if (!find) {
           target = null
         }
-        panes.push(pane)
-        state.currentTab = pane.name // select the tab corresponding to this pane
+        panesDate.push(pane)
+        // state.currentTab = pane.name // select the tab corresponding to this pane
       }
-      return panes
+      return panesDate
     })
     const hasSlot = computed(() => !!slots.default)
     // created
@@ -242,7 +243,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-tab-picker

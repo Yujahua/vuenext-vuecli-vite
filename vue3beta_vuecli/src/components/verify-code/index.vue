@@ -8,7 +8,8 @@
   </div>
 </template>
 
-<script>import {ref, watch} from '@vue/composition-api'
+<script>
+import {ref, watch} from 'vue'
 export default {
   name: 'ui-verify-code',
   props: {
@@ -74,7 +75,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-verify-btn

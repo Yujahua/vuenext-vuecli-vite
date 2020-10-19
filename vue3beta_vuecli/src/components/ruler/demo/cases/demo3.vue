@@ -13,7 +13,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {reactive, toRefs} from 'vue'
 import {Ruler} from '@csii/vx-mobile'
 
 export default {
@@ -41,7 +42,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
   .ui-example-child-single-component

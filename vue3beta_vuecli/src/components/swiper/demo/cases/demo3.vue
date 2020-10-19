@@ -15,7 +15,8 @@
   </div>
 </template>
 
-<script>import {onMounted, reactive} from '@vue/composition-api'
+<script>
+import {onMounted, reactive} from 'vue'
 import {Swiper, SwiperItem} from '@csii/vx-mobile'
 import mulit from '@csii/vx-mobile/components/swiper/demo/data/mulit-item'
 
@@ -61,7 +62,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-swiper-3

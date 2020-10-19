@@ -4,7 +4,8 @@
   </div>
 </template>
 
-<script>import {provide, getCurrentInstance} from '@vue/composition-api'
+<script>vue
+import {provide, getCurrentInstance} from 'vue'
 import Check from './index'
 
 export default {
@@ -56,5 +57,6 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 

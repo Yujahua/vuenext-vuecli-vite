@@ -23,8 +23,9 @@
   </div>
 </template>
 
-<script>import {TabBar, Swiper, SwiperItem} from '@csii/vx-mobile'
-import {reactive, nextTick, toRefs} from '@vue/composition-api'
+<script>
+import {TabBar, Swiper, SwiperItem} from '@csii/vx-mobile'
+import {reactive, nextTick, toRefs} from 'vue'
 
 export default {
   name: 'tab-bar-demo',
@@ -57,7 +58,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style>
 .ui-example-child-tab-bar-6 .ui-swiper {

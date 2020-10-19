@@ -28,7 +28,8 @@
   </div>
 </template>
 
-<script>import {reactive, onMounted, toRefs, computed, getCurrentInstance, onUnmounted} from '@vue/composition-api'
+<script>
+import {reactive, onMounted, toRefs, computed, getCurrentInstance, onUnmounted} from 'vue'
 import Scroller from '../_util/scroller'
 import {render} from '../_util/render'
 import {warn, debounce} from '../_util'
@@ -343,7 +344,9 @@ export default {
       if (state.userScrolling) {
         return
       }
-      event.preventDefault()
+      if (event.cancelable) {
+        event.preventDefault()
+      }
       let _offsetLeft = Math.min(Math.max(-dragState.itemWidth + 1, offsetLeft), dragState.itemWidth - 1)
       let _offsetTop = Math.min(Math.max(-dragState.itemHeight + 1, offsetTop), dragState.itemHeight - 1)
       const offset = state.isVertical
@@ -585,14 +588,14 @@ export default {
     const getIndex = () => calcDisplayIndex(state.index)
     state.realIndex = computed(() => getIndex())
     const swiperItemDestroyed = debounce(function() {
-      if (!this.ready) {
+      if (!state.ready) {
         return
       }
-      this.$nextTick(() => {
-        this.clearTimer()
-        this.reInitItems()
-        if (this.autoplay > 0 && !this.isStoped) {
-          this.startPlay()
+      rootEl.$nextTick(() => {
+        clearTimer()
+        reInitItems()
+        if (props.autoplay > 0 && !state.isStoped) {
+          startPlay()
         }
       })
     }, 50)
@@ -639,7 +642,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-swiper-box

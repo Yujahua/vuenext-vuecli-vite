@@ -18,7 +18,8 @@
   </div>
 </template>
 
-<script>import {ref, reactive} from '@vue/composition-api'
+<script>
+import {ref, reactive} from 'vue'
 export default {
   name: 'ui-bottom-tab',
   props: {
@@ -52,7 +53,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-bottom-tab {

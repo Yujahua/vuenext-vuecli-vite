@@ -21,7 +21,8 @@
   </div>
 </template>
 
-<script>import {toRefs} from '@vue/composition-api'
+<script>
+import {toRefs} from 'vue'
 import Icon from '../icon'
 export default {
   name: 'ui-agree',
@@ -58,7 +59,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-agree

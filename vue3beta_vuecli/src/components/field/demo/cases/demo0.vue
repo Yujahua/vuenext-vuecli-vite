@@ -16,7 +16,8 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
+<script>
+import {ref} from 'vue'
 import {Field, FieldItem, Dialog, Icon} from '@csii/vx-mobile'
 
 export default {
@@ -40,7 +41,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-field-0

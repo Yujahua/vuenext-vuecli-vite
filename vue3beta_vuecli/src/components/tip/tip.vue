@@ -24,7 +24,8 @@
   </div>
 </template>
 
-<script>import {computed} from '@vue/composition-api'
+<script>
+import {computed} from 'vue'
 import Icon from '../icon'
 
 export default {
@@ -71,7 +72,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 
 <style lang="stylus">

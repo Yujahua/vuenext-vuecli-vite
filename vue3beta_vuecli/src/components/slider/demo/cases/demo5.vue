@@ -4,8 +4,9 @@
 	</div>
 </template>
 
-<script>import {Slider} from '@csii/vx-mobile'
-import {reactive} from '@vue/composition-api'
+<script>
+import {Slider} from '@csii/vx-mobile'
+import {reactive} from 'vue'
 
 export default {
   name: 'slider-demo',
@@ -23,4 +24,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

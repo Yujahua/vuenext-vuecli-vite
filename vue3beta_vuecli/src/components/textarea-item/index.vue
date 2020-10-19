@@ -24,14 +24,15 @@
       @keydown="onKeydown"
     ></textarea>
     <slot name="footer"></slot>
-    <template v-slot:children>
+    <template slot="children">
       <div v-if="errorInfo" class="ui-textarea-item-msg">
         <p>{{ errorInfo }}</p>
       </div>
     </template>
   </ui-field-item>
 </template>
-<script>import {ref, computed, watch, onMounted, nextTick} from '@vue/composition-api'
+<script>
+import {ref, computed, watch, onMounted, nextTick} from 'vue'
 import FieldItem from '../field-item'
 
 export default {
@@ -175,7 +176,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 <style lang="stylus">
 .ui-textarea-item
   &-msg

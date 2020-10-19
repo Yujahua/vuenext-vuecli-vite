@@ -17,7 +17,7 @@
     :title="title"
     :solid="solid && !isTitleLatent"
   >
-    <template v-slot:left>
+    <template slot="left">
       <slot name="left"></slot>
     </template>
     <!-- ------------ -->
@@ -62,7 +62,7 @@
       </div>
     </template>
 
-    <template v-slot:right>
+    <template slot="right">
       <!-- ------------ -->
       <!--  CLEART BTN  -->
       <!-- ------------ -->
@@ -81,7 +81,7 @@
       <slot name="right"></slot>
     </template>
 
-    <template v-slot:children>
+    <template slot="children">
       <!-- -------------------- -->
       <!-- BRIEF/ERROR TIP -->
       <!-- -------------------- -->
@@ -114,7 +114,8 @@
   </ui-field-item>
 </template>
 
-<script>import {
+<script>
+import {
   reactive,
   toRefs,
   computed,
@@ -124,7 +125,7 @@
   nextTick,
   getCurrentInstance,
   onBeforeUnmount,
-} from '@vue/composition-api'
+} from 'vue'
 import Icon from '../icon'
 import FieldItem from '../field-item'
 import NumberKeyboard from '../number-keyboard'
@@ -599,7 +600,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-input-item

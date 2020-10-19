@@ -5,13 +5,20 @@ const pk = path.resolve(__dirname, '../package.json')
 // Import components core
 import './_style/global.styl'
 import {transformCamelCase, warn} from './_util'
-import Icon from './icon'
+import ActionBar from './action-bar'
+import ActionSheet from './action-sheet'
 import ActivityIndicator from './activity-indicator'
-// import ActionBar from './action-bar'
-// import ActionSheet from './action-sheet'
-// import NumberKeyboard from './number-keyboard'
+import Agree from './agree'
+import Amount from './amount'
+import BankList from './bank-list'
+import Bill from './bill'
+import BottomTab from './bottom-tab'
 import Button from './button'
-// import Popup from './popup'
+
+import Icon from './icon'
+
+import Popup from './popup'
+// import NumberKeyboard from './number-keyboard'
 // import PopupTitleBar from './popup-title-bar'
 // import Toast from './toast'
 // import Dialog from './dialog'
@@ -22,16 +29,11 @@ import Button from './button'
 // import FieldItem from './field-item'
 // import CellItem from './cell-item'
 // import Switch from './switch'
-// import Agree from './agree'
-// import Amount from './amount'
-// import Bill from './bill'
 // import WaterMark from './water-mark'
 // import DetailItem from './detail-item'
 // import Codebox from './codebox'
 // import Captcha from './captcha'
 // import GraphicList from './graphic-list'
-// import BankList from './bank-list'
-// import BottomTab from './bottom-tab'
 // import ImageReader from './image-reader'
 // import Cashier from './cashier'
 // import Swiper from './swiper'
@@ -89,13 +91,18 @@ const version = pk
 // const version = /* @echo MAN_VERSION */ MAN_VERSION
 
 export const components = {
-  Icon,
-  ActivityIndicator,
-  Button,
+  ActionBar,//测
+  ActionSheet,//测
+  ActivityIndicator,//测
+  Agree,
+  Amount,
+  BankList,
+  Bill,
+  BottomTab,
+  Button,//测
+  Icon,//测
+  Popup,
   // NumberKeyboard,
-  // ActionBar,
-  // ActionSheet,
-  // Popup,
   // PopupTitleBar,
   // Dialog,
   // Toast,
@@ -106,16 +113,11 @@ export const components = {
   // FieldItem,
   // CellItem,
   // Switch,
-  // Agree,
-  // Amount,
-  // Bill,
   // WaterMark,
   // DetailItem,
   // Codebox,
   // Captcha,
   // GraphicList,
-  // BankList,
-  // BottomTab,
   // ImageReader,
   // Cashier,
   // Swiper,
@@ -188,84 +190,15 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-// xport components
-export {
+// export components
+export default{
   install,
   version,
-  Icon,
-  ActivityIndicator,
   Button,
-  // NumberKeyboard,
-  // ActionBar,
-  // ActionSheet,
-  // Popup,
-  // PopupTitleBar,
-  // Dialog,
-  // Toast,
-  // Transition,
-  // Tag,
-  // Stepper,
-  // Field,
-  // FieldItem,
-  // CellItem,
-  // Switch,
-  // Agree,
-  // Amount,
-  // Bill,
-  // WaterMark,
-  // DetailItem,
-  // Codebox,
-  // Captcha,
-  // GraphicList,
-  // BankList,
-  // BottomTab,
-  // ImageReader,
-  // Cashier,
-  // Swiper,
-  // SwiperItem,
-  // Chart,
-  // Check,
-  // CheckBox,
-  // CheckGroup,
-  // CheckList,
-  // DatePicker,
-  // Picker,
-  // Col,
-  // Radio,
-  // RadioGroup,
-  // RadioBox,
-  // RadioList,
-  // DropMenu,
-  // Landscape,
-  // TabBar,
-  // NoticeBar,
-  // InputItem,
-  // LoadMore,
-  // VerifyCode,
-  // Tip,
-  // TextareaItem,
-  // Steps,
-  // Slider,
-  // Skeleton,
-  // Row,
-  // ResultPage,
-  // Progress,
-  // Tabs,
-  // TabPane,
-  // Ruler,
-  // TabPicker,
-  // ScrollView,
-  // ScrollViewRefresh,
-  // ScrollViewMore,
-  // Selector,
-  // SelectorGidc,
-  // Refresh,
-  // More,
-  // ImageViewer,
-  /* @init<%${componentNameUpper},%> */
+  ...components,
 }
 
-export default {
-  install,
-  version,
-}
+// export default {
+//   install,
+//   version,
+// }

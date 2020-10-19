@@ -21,8 +21,10 @@
   </div>
 </template>
 
-<script>import {Field, FieldItem, TabPicker} from '@csii/vx-mobile'
+<script>
+import {Field, FieldItem, TabPicker} from '@csii/vx-mobile'
 import data from '@csii/vx-mobile/components/tab-picker/demo/data'
+import {computed, reactive, toRefs} from 'vue'
 
 export default {
   name: 'tab-bar-demo',
@@ -34,22 +36,22 @@ export default {
     [FieldItem.name]: FieldItem,
     [TabPicker.name]: TabPicker,
   },
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       show: false,
       address: [],
       data: data,
+    })
+    const addressStr = computed(() => state.address.map(item => item.label).join(' '))
+    const handleChange = ({options}) => {
+      state.address = options
+    }
+    return {
+      ...toRefs(state),
+      addressStr,
+      handleChange,
     }
   },
-  computed: {
-    addressStr() {
-      return this.address.map(item => item.label).join(' ')
-    },
-  },
-  methods: {
-    handleChange({options}) {
-      this.address = options
-    },
-  },
 }
-</script>
+
+</script>

@@ -36,7 +36,8 @@
   </ui-check-group>
 </template>
 
-<script>import {computed} from '@vue/composition-api'
+<script>
+import {computed} from 'vue'
 import Check from './index'
 import CheckGroup from './group'
 import CellItem from '../cell-item'
@@ -94,7 +95,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-check-item

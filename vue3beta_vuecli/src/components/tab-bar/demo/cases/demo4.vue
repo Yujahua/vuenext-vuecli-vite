@@ -5,7 +5,7 @@
       :items="items"
       :has-ink="false"
     >
-      <template v-slot:item="{ item }" >
+      <template slot="item" slot-scope="{ item }">
         <div class="custom-item">
           <div class="icon">
             <ui-icon :name="item.icon" />
@@ -19,7 +19,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {reactive, toRefs} from 'vue'
 import {TabBar, Icon} from '@csii/vx-mobile'
 
 export default {
@@ -42,7 +43,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-tab-bar-4

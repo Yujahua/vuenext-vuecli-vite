@@ -76,7 +76,8 @@
   </div>
 </template>
 
-<script>import {ref, watch, onMounted, getCurrentInstance, onBeforeUnmount, nextTick} from '@vue/composition-api'
+<script>
+import {ref, watch, onMounted, getCurrentInstance, onBeforeUnmount, nextTick} from 'vue'
 import Dialog from '../dialog'
 import Codebox from '../codebox'
 import Button from '../button'
@@ -248,7 +249,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-captcha {

@@ -10,7 +10,8 @@
   </div>
 </template>
 
-<script>import {ref, onMounted} from '@vue/composition-api'
+<script>
+import {ref, onMounted} from 'vue'
 import {DatePicker, Dialog} from '@csii/vx-mobile'
 
 export default {
@@ -36,4 +37,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

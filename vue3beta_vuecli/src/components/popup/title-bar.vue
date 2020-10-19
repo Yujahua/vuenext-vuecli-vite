@@ -74,7 +74,8 @@
   </div>
 </template>
 
-<script>import titleBarMixin from './mixins/title-bar'
+<script>import {watch} from '@vue/composition-api'
+import titleBarMixin from './mixins/title-bar'
 import Icon from '../icon'
 
 export default {
@@ -114,15 +115,7 @@ export default {
     // },
   },
 
-  watch: {
-    largeRadius: {
-      handler(val) {
-        this.$parent.largeRadius = val
-      },
-      immediate: true,
-    },
-  },
-  setup(props, {emit}) {
+  setup(props, {emit, parent}) {
     const preventScroll = e => {
       /* istanbul ignore next */
       e.preventDefault()
@@ -130,6 +123,13 @@ export default {
     const cancelOrComfirmClick = type => {
       emit(type)
     }
+    watch(
+      () => props.largeRadius,
+      val => {
+        parent.largeRadius = val
+      },
+      {immediate: true},
+    )
     return {
       preventScroll,
       cancelOrComfirmClick,

@@ -5,7 +5,7 @@
       :steps="steps0"
       :current="0.5"
     >
-      <template v-slot:reached>
+      <template slot="reached">
         <ui-icon name="checked"></ui-icon>
       </template>
       <div
@@ -30,7 +30,7 @@
       :steps="steps1"
       :current="1"
     >
-      <template v-slot:current>
+      <template slot="current">
         <ui-icon name="checked"></ui-icon>
       </template>
       <div

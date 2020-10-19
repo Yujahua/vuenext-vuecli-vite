@@ -4,8 +4,9 @@
   </div>
 </template>
 
-<script>import {ResultPage, Toast} from '@csii/vx-mobile'
-import {reactive} from '@vue/composition-api'
+<script>
+import {ResultPage, Toast} from '@csii/vx-mobile'
+import {reactive} from 'vue'
 
 export default {
   name: 'result-page-demo',
@@ -37,7 +38,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-result-page-2

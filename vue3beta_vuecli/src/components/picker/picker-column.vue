@@ -58,7 +58,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs, computed, getCurrentInstance, watch, set, nextTick} from '@vue/composition-api'
+<script>
+import {reactive, toRefs, computed, getCurrentInstance, watch, set, nextTick} from 'vue'
 import Scroller from '../_util/scroller'
 import {render} from '../_util/render'
 import {noop, getDpr, traverse, inArray, extend, warn} from '../_util'
@@ -517,7 +518,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-picker-column

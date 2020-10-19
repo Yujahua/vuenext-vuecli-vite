@@ -122,8 +122,9 @@
   </div>
 </template>
 
-<script>import {Popup, Button} from '@csii/vx-mobile'
-import {reactive} from '@vue/composition-api'
+<script>
+import {Popup, Button} from '@csii/vx-mobile'
+import {reactive, set} from 'vue'
 
 export default {
   name: 'transition-demo',
@@ -138,7 +139,8 @@ export default {
   setup() {
     let isPopupShow = reactive([])
     const showPopUp = type => {
-      isPopupShow[type] = true
+      // isPopupShow[type] = true
+      set(isPopupShow, type, true)
     }
     return {
       isPopupShow,
@@ -146,7 +148,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-transition-1

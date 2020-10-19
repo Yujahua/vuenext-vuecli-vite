@@ -36,7 +36,7 @@
             v-on="$listeners"
           >
             <slot name="channel"></slot>
-            <template v-slot:button>
+            <template slot="button">
               <slot name="payButton"></slot>
             </template>
           </ui-cashier-channel>
@@ -124,7 +124,8 @@
   </div>
 </template>
 
-<script>import {ref, reactive, watch} from '@vue/composition-api'
+<script>
+import {ref, reactive, watch} from 'vue'
 import Popup from '../popup'
 import PopupTitlebar from '../popup/title-bar'
 import popupMixin from '../popup/mixins'
@@ -289,7 +290,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-cashier {

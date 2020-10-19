@@ -4,12 +4,12 @@
       :steps="steps"
       :current="2"
     >
-      <template v-slot:reached="props" >
+      <template slot="reached" slot-scope="props">
         <!-- props.index -->
         <ui-icon name="checked" v-if="props.index === 1"></ui-icon>
         <div class="step-node-default" v-else></div>
       </template>
-      <template v-slot:current="props" >
+      <template slot="current" slot-scope="props">
         <ui-icon name="location"></ui-icon>
       </template>
     </ui-steps>

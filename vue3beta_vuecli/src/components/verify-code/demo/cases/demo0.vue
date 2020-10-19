@@ -8,8 +8,10 @@
 
 export default {
   name: 'verify-code-demo',
+  /* DELETE */
   title: '按钮验证码',
   describe: '点击按钮获取验证码',
+  /* DELETE */
   components: {
     [VerifyCode.name]: VerifyCode,
   },

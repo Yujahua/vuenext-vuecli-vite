@@ -4,7 +4,8 @@
   </div>
 </template>
 
-<script>import {provide, getCurrentInstance} from '@vue/composition-api'
+<script>
+import {provide, getCurrentInstance} from 'vue'
 export default {
   name: 'ui-radio-group',
 
@@ -28,5 +29,6 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 

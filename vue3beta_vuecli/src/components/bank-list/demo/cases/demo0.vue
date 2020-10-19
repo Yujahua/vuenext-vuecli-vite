@@ -5,13 +5,16 @@
 	</div>
 </template>
 
-<script>import {reactive} from '@vue/composition-api'
+<script>
+import {reactive} from 'vue'
 import {BankList} from '@csii/vx-mobile'
 
 export default {
   name: 'bank-list-demo',
+  /* DELETE */
   title: '基本/Basic',
   describe: '银行列表',
+  /* DELETE */
   components: {
     [BankList.name]: BankList,
   },
@@ -28,7 +31,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 </style>

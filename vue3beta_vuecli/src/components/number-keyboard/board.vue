@@ -63,7 +63,8 @@
   </div>
 </template>
 
-<script>import {computed, reactive} from '@vue/composition-api'
+<script>
+import {computed, reactive} from 'vue'
 import {noop} from '../_util'
 import Key from './key'
 function generateKeyNumber(props) {
@@ -133,7 +134,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-number-keyboard-container

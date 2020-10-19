@@ -15,7 +15,8 @@
   </div>
 </template>
 
-<script>import {ref, reactive, watch, computed, toRefs, provide, getCurrentInstance, onMounted} from '@vue/composition-api'
+<script>
+import {ref, reactive, watch, computed, toRefs, provide, getCurrentInstance, onMounted} from 'vue'
 import TabBar from '../tab-bar'
 
 export default {
@@ -44,6 +45,7 @@ export default {
       panes: [],
     })
     const that = getCurrentInstance()
+
     watch(
       () => props.value,
       val => {
@@ -109,7 +111,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-tabs-content

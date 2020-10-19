@@ -5,7 +5,9 @@
 	</div>
 </template>
 
-<script>import {Check} from '@csii/vx-mobile'
+<script>
+import {ref} from 'vue'
+import {Check} from '@csii/vx-mobile'
 
 export default {
   name: 'check-demo',
@@ -16,10 +18,11 @@ export default {
   components: {
     [Check.name]: Check,
   },
-  data() {
+  setup() {
     return {
-      checked: false,
+      checked: ref(false),
     }
   },
 }
-</script>
+
+</script>

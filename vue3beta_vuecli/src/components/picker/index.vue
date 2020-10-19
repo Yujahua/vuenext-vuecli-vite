@@ -56,7 +56,8 @@
   </div>
 </template>
 
-<script>import {ref, computed, watch, getCurrentInstance, nextTick, onMounted} from '@vue/composition-api'
+<script>
+import {ref, computed, watch, getCurrentInstance, nextTick, onMounted} from 'vue'
 import Popup from '../popup'
 import PopTitleBar from '../popup/title-bar'
 import PickerColumn from './picker-column'
@@ -345,7 +346,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-picker

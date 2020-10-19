@@ -20,7 +20,8 @@
 	</div>
 </template>
 
-<script>import {} from '@vue/composition-api'
+<script>
+import {} from 'vue'
 import {Chart} from '@csii/vx-mobile'
 
 export default {
@@ -40,7 +41,8 @@ export default {
     return {format}
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
   svg

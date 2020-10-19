@@ -25,7 +25,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {reactive, toRefs} from 'vue'
 import Button from '../button'
 
 export default {
@@ -85,7 +86,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-result

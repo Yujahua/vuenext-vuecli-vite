@@ -4,7 +4,8 @@
   </div>
 </template>-->
 
-<script>import {ref, computed} from '@vue/composition-api'
+<script>
+import {ref, computed} from 'vue'
 export default {
   name: 'ui-col',
   props: {
@@ -44,7 +45,8 @@ export default {
     )
   },
 }
-</script>
+
+</script>
 
 <style scoped>
   [class*=ui-col-] {

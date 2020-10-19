@@ -44,7 +44,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs, computed, watch, set, onMounted, getCurrentInstance} from '@vue/composition-api'
+<script>
+import {reactive, toRefs, computed, watch, set, onMounted, getCurrentInstance} from 'vue'
 import Popup from '../popup'
 import RadioList from '../radio-list'
 import {traverse, compareObjects} from '../_util'
@@ -154,7 +155,6 @@ export default {
       }
     }
     const onListItemClick = listItem => {
-      console.log(state.selectedMenuListValue[state.activeMenuBarIndex])
       const activeMenuBarIndex = state.activeMenuBarIndex
       const barItem = props.data[activeMenuBarIndex]
       state.isPopupShow = false
@@ -200,7 +200,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-drop-menu

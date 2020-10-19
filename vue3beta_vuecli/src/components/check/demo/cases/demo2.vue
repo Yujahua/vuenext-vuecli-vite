@@ -6,7 +6,9 @@
 	</div>
 </template>
 
-<script>import {CheckBox} from '@csii/vx-mobile'
+<script>
+import {CheckBox} from '@csii/vx-mobile'
+import {ref} from 'vue'
 
 export default {
   name: 'check-demo',
@@ -17,10 +19,11 @@ export default {
   components: {
     [CheckBox.name]: CheckBox,
   },
-  data() {
+  setup() {
     return {
-      pay: '',
+      pay: ref(''),
     }
   },
 }
-</script>
+
+</script>

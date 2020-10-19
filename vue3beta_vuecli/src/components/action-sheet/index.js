@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import {createApp} from 'vue'
 import ActionSheet from './action-sheet'
 
 const noop = function() {}
@@ -25,18 +25,19 @@ ActionSheet.create = function({
   onSelected = noop,
   onCancel = noop,
 }) {
-  const ActionSheetCtor = Vue.extend(ActionSheet)
-  const vm = new ActionSheetCtor({
-    propsData: {
-      value,
-      title,
-      options,
-      defaultIndex,
-      invalidIndex,
-      cancelText,
-      maxHeight,
-    },
-  }).$mount()
+  const vm = createApp(
+    Object.assign(ActionSheet, {
+      propsData: {
+        value,
+        title,
+        options,
+        defaultIndex,
+        invalidIndex,
+        cancelText,
+        maxHeight,
+      },
+    }),
+  ).mount()
 
   instances.push(vm)
 

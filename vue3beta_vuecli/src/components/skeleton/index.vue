@@ -23,7 +23,8 @@
     <slot></slot>
   </div>
 </template>
-<script>import {getCurrentInstance} from '@vue/composition-api'
+<script>
+import {getCurrentInstance} from 'vue'
 const DEFUALT_TITLE_WIDTH = '40%'
 const DEFUALT_WIDTH = '100%'
 
@@ -88,7 +89,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 placeHolder()

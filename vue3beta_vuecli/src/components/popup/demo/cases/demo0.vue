@@ -63,7 +63,8 @@
   </div>
 </template>
 
-<script>import {reactive} from '@vue/composition-api'
+<script>
+import {reactive, set} from 'vue'
 import {Popup, PopupTitleBar, Button, Icon} from '@csii/vx-mobile'
 
 export default {
@@ -81,10 +82,10 @@ export default {
   setup() {
     let isPopupShow = reactive({})
     const showPopUp = type => {
-      isPopupShow[type] = true
+      set(isPopupShow, type, true)
     }
     const hidePopUp = type => {
-      isPopupShow[type] = false
+      set(isPopupShow, type, false)
     }
     return {
       isPopupShow,
@@ -93,7 +94,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-popup-0

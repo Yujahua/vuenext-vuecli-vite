@@ -15,8 +15,9 @@
   </div>
 </template>
 
-<script>import {Skeleton, Field, CellItem} from '@csii/vx-mobile'
-import {ref, onMounted} from '@vue/composition-api'
+<script>
+import {Skeleton, Field, CellItem} from '@csii/vx-mobile'
+import {ref, onMounted} from 'vue'
 export default {
   name: 'skeleton-demo',
   /* DELETE */
@@ -48,7 +49,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .ui-example-child-skeleton-2

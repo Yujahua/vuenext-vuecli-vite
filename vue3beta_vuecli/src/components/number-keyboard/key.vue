@@ -19,7 +19,8 @@
   </li>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
+<script>
+import {ref} from 'vue'
 export default {
   name: 'ui-number-key',
 
@@ -60,4 +61,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

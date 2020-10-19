@@ -33,7 +33,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {reactive, toRefs, watch} from 'vue'
 
 import Popup from '../popup'
 
@@ -75,11 +76,6 @@ export default {
     },
   },
 
-  watch: {
-    value(newVal) {
-      this.isActionSheetShow = newVal
-    },
-  },
   setup(props, {emit}) {
     let state = reactive({
       isActionSheetShow: props.value,
@@ -87,6 +83,12 @@ export default {
       scroller: '',
     })
     state.clickIndex = props.defaultIndex
+    watch(
+      () => props.value,
+      newVal => {
+        state.isActionSheetShow = newVal
+      },
+    )
     // MARK: events handler, 如 onButtonClick
     const onShow = () => {
       emit('show')
@@ -121,7 +123,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-action-sheet

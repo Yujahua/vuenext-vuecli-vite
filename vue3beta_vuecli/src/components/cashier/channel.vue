@@ -46,7 +46,8 @@
   </div>
 </template>
 
-<script>import {ref, computed, nextTick} from '@vue/composition-api'
+<script>
+import {ref, computed, nextTick} from 'vue'
 import Button from '../button'
 import Icon from '../icon'
 import ChannelItem from './channel-item'
@@ -113,7 +114,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-cashier-channel

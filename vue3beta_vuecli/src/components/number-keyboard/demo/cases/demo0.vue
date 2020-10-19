@@ -26,7 +26,8 @@
   </div>
 </template>
 
-<script>import {ref, reactive, set} from '@vue/composition-api'
+<script>
+import {ref, reactive, set} from 'vue'
 import {NumberKeyboard, Button} from '@csii/vx-mobile'
 
 export default {
@@ -69,7 +70,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-number-keyboard-0

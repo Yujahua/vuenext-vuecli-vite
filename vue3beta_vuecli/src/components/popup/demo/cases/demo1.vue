@@ -72,8 +72,9 @@
   </div>
 </template>
 
-<script>import {Popup, PopupTitleBar, Button, Icon} from '@csii/vx-mobile'
-import {reactive} from '@vue/composition-api'
+<script>
+import {Popup, PopupTitleBar, Button, Icon, ScrollView} from '@csii/vx-mobile'
+import {reactive, set} from 'vue'
 
 export default {
   name: 'popup-demo',
@@ -87,15 +88,15 @@ export default {
     [PopupTitleBar.name]: PopupTitleBar,
     [Button.name]: Button,
     [Icon.name]: Icon,
-    // [ScrollView.name]: ScrollView,
+    [ScrollView.name]: ScrollView,
   },
   setup() {
     let isPopupShow = reactive({})
     const showPopUp = type => {
-      isPopupShow[type] = true
+      set(isPopupShow, type, true)
     }
     const hidePopUp = type => {
-      isPopupShow[type] = false
+      set(isPopupShow, type, false)
     }
     return {
       isPopupShow,
@@ -104,7 +105,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-popup-2

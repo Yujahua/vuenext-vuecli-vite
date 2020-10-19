@@ -1,0 +1,81 @@
+---
+title: Selector
+---
+
+For selecting an item from the popup list
+
+### Import
+
+```javascript
+import { Selector } from '@csii/vx-mobile'
+
+Vue.component(Selector.name, Selector)
+```
+
+### Code Examples
+
+<!-- DEMO -->
+
+### API
+
+#### Selector Props
+|Props | Description | Type | Default | Note|
+|----|-----|------|------|------|
+|v-model|display selector or not|Boolean|false|-|
+|data|data source|Array<{value,text,disabled,...}>|`[]`|`text` can be a `html` fragment|
+|default-value|the value of initially selected item|any|-|when `multi` is `true`, `default-value` should be `array`|
+|title|title of selector|String|-|-|
+|describe|description of selector|String|-|-|
+|ok-text|confirmation text|String|-|if empty, it will be `confirmed mode`, that is, click to select directly|
+|cancel-text|cancellation text|String|`cancel`|-|
+|large-radius|large radius of title bar|Boolean|`false`|-|
+|hide-title-bar|hide title bar|Boolean|`false`|-|
+|mask-closable|if the popup will be closed when clicking mask|Boolean|`true`|-|
+|is-check|has a `check` icon or not|Boolean|`false`|only for `confirmed mode`|
+|max-height|the maximum height of selectable area|Number/String|`auto`|-|
+|min-height|the minimum height of selectable area|Number/String|`auto`|-|
+|icon|icon of selected option|String|`checked`|-|
+|icon-inverse|icon of unselected options|String|`check`|-|
+|icon-disabled|icon of disabled options|String|`check-disabled`|-|
+|icon-size|the size of icon|String|`lg`|-|
+|icon-svg|use svg icon|Boolean|`false`|-|
+|icon-position|the position of icon|String|`right`|`left`, `right`|
+|multi|support multi select|Boolean|`false`|`multi` must be with `ok-text` prop|
+
+
+#### Selector Events
+
+#### @choose({value, text, ...})
+Select one item
+
+#### @confirm({value, text, ...})
+Confirm selection
+
+#### @cancel()
+Cancel selection
+
+#### @show()
+Show selector
+
+#### @hide()
+Hide selector
+
+#### Selector Slots
+
+##### default
+
+```html
+<ui-selector>
+  <template slot-scope="{ option, index, selected }">
+    <div class="ui-selector-custom-title">Hello, {{ option.text }}</div>
+  </template>
+</ui-selector>
+```
+
+##### header
+
+header slot
+
+##### footer
+
+footer slot

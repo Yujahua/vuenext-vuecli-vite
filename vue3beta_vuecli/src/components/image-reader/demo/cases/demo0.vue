@@ -38,8 +38,9 @@
   </div>
 </template>
 
-<script>import {Icon, ImageReader, Tag, Toast} from '@csii/vx-mobile'
-import {reactive} from '@vue/composition-api'
+<script>
+import {Icon, ImageReader, Tag, Toast} from '@csii/vx-mobile'
+import {reactive} from 'vue'
 
 export default {
   name: 'image-reader-demo',
@@ -92,7 +93,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .ui-example-child-reader

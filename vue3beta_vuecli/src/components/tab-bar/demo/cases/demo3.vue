@@ -8,8 +8,9 @@
   </div>
 </template>
 
-<script>import {TabBar} from '@csii/vx-mobile'
-import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {TabBar} from '@csii/vx-mobile'
+import {reactive, toRefs} from 'vue'
 
 export default {
   name: 'tab-bar-demo',
@@ -30,4 +31,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

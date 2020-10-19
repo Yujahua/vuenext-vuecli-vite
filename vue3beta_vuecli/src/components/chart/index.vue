@@ -52,7 +52,8 @@
   </svg>
 </template>
 
-<script>import {ref, computed, onMounted, onBeforeUnmount} from '@vue/composition-api'
+<script>
+import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 export default {
   name: 'ui-chart',
 
@@ -274,7 +275,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-chart

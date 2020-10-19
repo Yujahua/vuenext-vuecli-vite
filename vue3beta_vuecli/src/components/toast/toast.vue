@@ -18,7 +18,8 @@
   </div>
 </template>
 
-<script>import {onUnmounted, ref} from '@vue/composition-api'
+<script>
+import {onUnmounted, ref} from 'vue'
 import Popup from '../popup'
 import Icon from '../icon'
 
@@ -99,7 +100,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-toast

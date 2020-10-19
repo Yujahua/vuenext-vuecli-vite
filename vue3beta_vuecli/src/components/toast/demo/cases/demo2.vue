@@ -15,11 +15,6 @@ export default {
   components: {
     [Button.name]: Button,
   },
-  methods: {
-    showSucceedToast() {
-      Toast.failed('操作失败')
-    },
-  },
   setup() {
     const showSucceedToast = () => {
       Toast.failed('操作失败')

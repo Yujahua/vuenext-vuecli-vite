@@ -4,7 +4,8 @@
   </div>
 </template>
 
-<script>import {reactive} from '@vue/composition-api'
+<script>
+import {reactive} from 'vue'
 import {Steps} from '@csii/vx-mobile'
 
 export default {
@@ -32,4 +33,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

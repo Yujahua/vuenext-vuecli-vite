@@ -25,7 +25,8 @@
   </div>
 </template>
 
-<script>import {ref, reactive, computed, watch, onMounted, getCurrentInstance, set} from '@vue/composition-api'
+<script>
+import {ref, reactive, computed, watch, onMounted, getCurrentInstance, set} from 'vue'
 import Picker from '../picker'
 import pickerMixin from '../picker/mixins'
 import {toObject, toArray, warn} from '../_util'
@@ -403,7 +404,6 @@ export default {
       generateDateData.type = 'Date'
       generateHourData.type = 'Hour'
       generateMinuteData.type = 'Minute'
-
       const defaultDate = getDefaultDate()
       switch (props.type) {
         case 'date':
@@ -455,6 +455,7 @@ export default {
         isSetColumn && picker.value.setColumnValues(i, curColumnData)
 
         // store column date
+        // columnData[i]=curColumnData
         set(columnData, i, curColumnData)
       }
 
@@ -563,7 +564,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-date-picker {

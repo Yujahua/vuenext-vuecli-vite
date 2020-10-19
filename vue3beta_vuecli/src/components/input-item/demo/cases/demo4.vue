@@ -39,7 +39,8 @@
   </div>
 </template>
 
-<script>import {getCurrentInstance} from '@vue/composition-api'
+<script>
+import {getCurrentInstance} from 'vue'
 import {InputItem, NumberKeyboard, Field, Icon, Toast} from '@csii/vx-mobile'
 import '@examples/assets/images/bank-zs.svg'
 
@@ -76,7 +77,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-input-item-2

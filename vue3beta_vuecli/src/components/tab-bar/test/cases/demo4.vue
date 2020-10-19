@@ -1,7 +1,7 @@
 <template>
   <div class="ui-example-child ui-example-child-tabs ui-example-child-tab-bar-4">
     <ui-tab-bar v-model="current" :items="items">
-      <template v-slot:item="{ item }" >
+      <template slot="item" slot-scope="{ item }">
         <ui-icon :name="item.icon" />
         <span v-text="item.label"></span>
       </template>

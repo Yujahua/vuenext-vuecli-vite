@@ -43,7 +43,8 @@
   </div>
 </template>
 
-<script>import {ref, computed, onUpdated, onMounted} from '@vue/composition-api'
+<script>
+import {ref, computed, onUpdated, onMounted} from 'vue'
 import Icon from '../icon'
 export default {
   name: 'ui-notice-bar',
@@ -142,7 +143,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-notice-bar

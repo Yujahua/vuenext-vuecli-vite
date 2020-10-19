@@ -10,7 +10,9 @@
 	</div>
 </template>
 
-<script>import {Check, CheckGroup} from '@csii/vx-mobile'
+<script>
+import {Check, CheckGroup} from '@csii/vx-mobile'
+import {reactive} from 'vue'
 
 export default {
   name: 'check-demo',
@@ -22,10 +24,11 @@ export default {
     [Check.name]: Check,
     [CheckGroup.name]: CheckGroup,
   },
-  data() {
+  setup() {
     return {
-      favorites: ['apple'],
+      favorites: reactive(['apple']),
     }
   },
 }
-</script>
+
+</script>

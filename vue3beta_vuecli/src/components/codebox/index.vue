@@ -77,7 +77,8 @@
   </div>
 </template>
 
-<script>import {
+<script>
+import {
   ref,
   watchEffect,
   computed,
@@ -85,7 +86,7 @@
   getCurrentInstance,
   nextTick,
   onBeforeUnmount,
-} from '@vue/composition-api'
+} from 'vue'
 import NumberKeyboard from '../number-keyboard'
 
 export default {
@@ -244,7 +245,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-codebox-wrapper {

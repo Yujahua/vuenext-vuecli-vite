@@ -66,8 +66,9 @@
   </div>
 </template>
 
-<script>import {Dialog, Button, Toast} from '@csii/vx-mobile'
-import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {Dialog, Button, Toast} from '@csii/vx-mobile'
+import {reactive, toRefs} from 'vue'
 
 export default {
   name: 'dialog-demo',
@@ -200,7 +201,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .dialog-banner

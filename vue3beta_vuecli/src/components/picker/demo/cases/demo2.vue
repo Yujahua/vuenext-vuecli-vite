@@ -35,7 +35,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {getCurrentInstance, reactive, toRefs} from 'vue'
 import {Picker, Field, FieldItem} from '@csii/vx-mobile'
 import simple from '@csii/vx-mobile/components/picker/demo/data/simple'
 import district from '@csii/vx-mobile/components/picker/demo/data/district'
@@ -61,13 +62,14 @@ export default {
       pickerValue0: '',
       pickerValue1: '',
     })
+    const that = getCurrentInstance()
     const onPickerConfirm = index => {
       const values = refs[`picker${index}`].getColumnValues()
       let res = ''
       values.forEach(value => {
         value && (res += `${value.text || value.label} `)
       })
-      this[`pickerValue${index}`] = res
+      that[`pickerValue${index}`] = res
     }
     return {
       ...toRefs(state),
@@ -75,4 +77,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

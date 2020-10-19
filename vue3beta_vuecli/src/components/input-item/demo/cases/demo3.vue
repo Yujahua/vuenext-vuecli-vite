@@ -23,7 +23,8 @@
   </div>
 </template>
 
-<script>import {ref, computed} from '@vue/composition-api'
+<script>
+import {ref, computed} from 'vue'
 import {InputItem, Field, Icon, Toast} from '@csii/vx-mobile'
 
 export default {
@@ -57,7 +58,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-input-item-3

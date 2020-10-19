@@ -16,7 +16,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs, computed, getCurrentInstance, watch, onMounted, ref} from '@vue/composition-api'
+<script>
+import {reactive, toRefs, computed, getCurrentInstance, watch, onMounted, ref} from 'vue'
 import Scroller from '../_util/scroller'
 import {throttle, noop} from '../_util'
 
@@ -337,7 +338,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-ruler

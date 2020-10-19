@@ -10,7 +10,7 @@
         :max-height="150"
         placeholder="描述信息在100字以内"
       >
-        <template v-slot:footer>
+        <template slot="footer">
           <p class="demo2-footer">
             <span
               class="demo2-footer-left"
@@ -30,7 +30,9 @@
   </div>
 </template>
 
-<script>import {TextareaItem, Field} from '@csii/vx-mobile'
+<script>
+import {TextareaItem, Field} from '@csii/vx-mobile'
+import {ref} from 'vue'
 
 export default {
   name: 'tips-demo',
@@ -38,9 +40,10 @@ export default {
   title: '插槽',
   titleEnUS: 'Slot',
   /* DELETE */
-  data() {
+  setup() {
+    const value = ref('')
     return {
-      value: '',
+      value,
     }
   },
   components: {
@@ -48,7 +51,8 @@ export default {
     [Field.name]: Field,
   },
 }
-</script>
+
+</script>
 <style lang="stylus" scoped>
 .ui-example-child-textarea-2
   .demo2-footer

@@ -8,8 +8,9 @@
   </div>
 </template>
 
-<script>import {ActionBar, Dialog} from '@csii/vx-mobile'
-import {reactive} from '@vue/composition-api'
+<script>
+import {ActionBar, Dialog} from '@csii/vx-mobile'
+import {reactive} from 'vue'
 
 export default {
   name: 'action-bar-demo',
@@ -45,7 +46,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .price

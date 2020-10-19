@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script>import {ref, reactive} from '@vue/composition-api'
+<script>
+import {ref, reactive} from 'vue'
 import {DropMenu} from '@csii/vx-mobile'
 
 export default {
@@ -76,4 +77,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

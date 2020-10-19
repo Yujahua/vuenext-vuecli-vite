@@ -11,13 +11,14 @@
     :rotate="rotate"
   >
     <slot></slot>
-    <template v-slot:defs>
+    <template slot="defs">
       <slot name="defs"></slot>
     </template>
   </ui-activity-indicator-rolling>
 </template>
 
-<script>import {ref, watch, onMounted} from '@vue/composition-api'
+<script>
+import {ref, watch, onMounted} from 'vue'
 import Roller from '../activity-indicator/roller'
 import {noop, inBrowser} from '../_util'
 import Animate from '../_util/animate'
@@ -107,4 +108,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

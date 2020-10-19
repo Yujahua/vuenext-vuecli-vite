@@ -9,7 +9,9 @@
 	</div>
 </template>
 
-<script>import {CheckBox, CheckGroup} from '@csii/vx-mobile'
+<script>
+import {CheckBox, CheckGroup} from '@csii/vx-mobile'
+import {reactive} from 'vue'
 
 export default {
   name: 'check-demo',
@@ -21,10 +23,11 @@ export default {
     [CheckBox.name]: CheckBox,
     [CheckGroup.name]: CheckGroup,
   },
-  data() {
+  setup() {
     return {
-      insurants: ['self'],
+      insurants: reactive(['self']),
     }
   },
 }
-</script>
+
+</script>

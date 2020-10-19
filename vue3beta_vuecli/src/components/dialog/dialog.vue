@@ -61,7 +61,8 @@
   </div>
 </template>
 
-<script>import {onMounted, onBeforeUnmount} from '@vue/composition-api'
+<script>
+import {onMounted, onBeforeUnmount, getCurrentInstance} from 'vue'
 import Popup from '../popup'
 import Icon from '../icon'
 import ActivityIndicatorRolling from '../activity-indicator/roller'
@@ -136,7 +137,8 @@ export default {
       default: '',
     },
   },
-  setup(props, {emit, root}) {
+  setup(props, {emit}) {
+    const that = getCurrentInstance()
     // MARK: private methods
 
     // MARK: events handler
@@ -165,12 +167,12 @@ export default {
     }
     onMounted(() => {
       if (props.appendTo) {
-        props.appendTo.appendChild(root.$el)
+        props.appendTo.appendChild(that.$el)
       }
     })
     onBeforeUnmount(() => {
       if (props.appendTo) {
-        props.appendTo.removeChild(root.$el)
+        props.appendTo.removeChild(that.$el)
       }
     })
     return {
@@ -182,7 +184,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-dialog

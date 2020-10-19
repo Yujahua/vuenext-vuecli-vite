@@ -7,7 +7,8 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
+<script>
+import {ref} from 'vue'
 import {Switch} from '@csii/vx-mobile'
 
 export default {
@@ -30,4 +31,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

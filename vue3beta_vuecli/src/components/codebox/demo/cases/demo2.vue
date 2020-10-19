@@ -7,7 +7,9 @@
   </div>
 </template>
 
-<script>import {Codebox} from '@csii/vx-mobile'
+<script>
+import {Codebox} from '@csii/vx-mobile'
+import {ref} from 'vue'
 
 export default {
   name: 'codebox-demo',
@@ -18,10 +20,11 @@ export default {
   components: {
     [Codebox.name]: Codebox,
   },
-  data() {
+  setup() {
     return {
-      code: '',
+      code: ref(''),
     }
   },
 }
-</script>
+
+</script>

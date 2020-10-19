@@ -4,7 +4,8 @@
   </span>
 </template>
 
-<script>import {ref, watch, computed, onMounted} from '@vue/composition-api'
+<script>
+import {ref, watch, computed, onMounted} from 'vue'
 import {noop, inBrowser} from '../_util'
 import Animate from '../_util/animate'
 import {formatValueByGapStep} from '../_util/formate-value'
@@ -118,7 +119,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-amount

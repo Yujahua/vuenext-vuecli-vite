@@ -41,7 +41,8 @@
 	</div>
 </template>
 
-<script>import {ref, reactive} from '@vue/composition-api'
+<script>
+import {ref, reactive} from 'vue'
 import {Button, Field, FieldItem, InputItem, RadioList, Switch, Cashier, Toast} from '@csii/vx-mobile'
 
 export default {
@@ -189,7 +190,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-cashier

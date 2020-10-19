@@ -5,8 +5,9 @@
         <slot></slot>
       </div>
       <div class="ui-action-bar-group">
-        <template v-for="(item, index) in coerceActions">
-          <ui-button
+        <template>
+          <ui-button v-for="(item, index) in coerceActions"
+            :key=index
             class="ui-action-bar-button"
             :type="item.type || (!!item.disabled ? 'disabled' : 'primary')"
             :plain="item.plain || index !== coerceActions.length - 1"
@@ -15,7 +16,7 @@
             :loading="item.loading"
             :icon="item.icon"
             :icon-svg="item.iconSvg"
-            :key="index"
+            
             @click="onBtnClick($event, item)"
           >
             {{ item.text }}
@@ -26,7 +27,8 @@
   </div>
 </template>
 
-<script>import {computed} from '@vue/composition-api'
+<script>
+import {computed} from 'vue'
 
 import Button from '../button'
 import {isEmptyObject} from '../_util'
@@ -41,7 +43,9 @@ export default {
   props: {
     actions: {
       type: Array,
-      default: [],
+      default() {
+        return []
+      },
     },
   },
   setup(props, {emit, slots}) {
@@ -62,7 +66,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-action-bar

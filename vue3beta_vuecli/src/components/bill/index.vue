@@ -23,7 +23,7 @@
         <slot name="footer"></slot>
       </footer>
     </div>
-    <template v-slot:watermark="props"  v-if="!!$slots.watermark">
+    <template slot="watermark" slot-scope="props" v-if="!!$scopedSlots.watermark">
       <slot name="watermark" :coord="props.coord"></slot>
     </template>
   </ui-water-mark>

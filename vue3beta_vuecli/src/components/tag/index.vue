@@ -35,7 +35,8 @@
   </div>
 </template>
 
-<script>import {reactive, set, computed, onMounted, nextTick, getCurrentInstance} from '@vue/composition-api'
+<script>
+import {reactive, set, computed, onMounted, nextTick, getCurrentInstance} from 'vue'
 import {transformCamelCase} from '../_util'
 export default {
   name: 'ui-tag',
@@ -125,7 +126,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-tag

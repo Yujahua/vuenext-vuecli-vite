@@ -14,7 +14,8 @@
   </div>
 </template>
 
-<script>import {reactive, onMounted, toRefs} from '@vue/composition-api'
+<script>
+import {reactive, onMounted, toRefs} from 'vue'
 import {Picker, Dialog} from '@csii/vx-mobile'
 import district from '@csii/vx-mobile/components/picker/demo/data/district'
 
@@ -91,4 +92,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

@@ -42,7 +42,8 @@
   </div>
 </template>
 
-<script>import {reactive, toRefs, watch, getCurrentInstance, computed} from '@vue/composition-api'
+<script>
+import {reactive, toRefs, watch, getCurrentInstance, computed} from 'vue'
 export default {
   name: 'ui-slider',
 
@@ -264,7 +265,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-slider

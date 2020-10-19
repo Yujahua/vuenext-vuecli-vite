@@ -8,7 +8,8 @@
   </div>
 </template>
 
-<script>import {reactive, ref} from '@vue/composition-api'
+<script>
+import {reactive, ref} from 'vue'
 import {Steps} from '@csii/vx-mobile'
 
 export default {
@@ -43,7 +44,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-steps-5

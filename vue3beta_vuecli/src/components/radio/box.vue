@@ -10,7 +10,8 @@
   </ui-check-base-box>
 </template>
 
-<script>import {inject, computed} from '@vue/composition-api'
+<script>
+import {inject, computed} from 'vue'
 import CheckBaseBox from '../check-base/box'
 
 export default {
@@ -53,4 +54,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

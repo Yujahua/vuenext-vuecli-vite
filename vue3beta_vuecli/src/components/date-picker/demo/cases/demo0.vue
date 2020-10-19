@@ -12,7 +12,8 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
+<script>
+import {ref} from 'vue'
 import {DatePicker} from '@csii/vx-mobile'
 
 export default {
@@ -20,14 +21,14 @@ export default {
   /* DELETE */
   title: '日期选择',
   titleEnUS: 'Date selection',
-  describe: '2013/9/9 - 2020/9/9',
+  describe: '2013/9/9 - 2022/9/9',
   /* DELETE */
   components: {
     [DatePicker.name]: DatePicker,
   },
   setup(props, {refs}) {
     const minDate = ref(new Date('2013/9/9'))
-    const maxDate = ref(new Date('2020/9/9'))
+    const maxDate = ref(new Date('2022/9/9'))
     const currentDate = ref(new Date())
     const onDatePickerInitialed = () => {
       console.log(`[CSII VX Mobile] DatePicker getFormatDate: ${refs.datePicker.getFormatDate('yyyy/MM/dd')}`)
@@ -40,4 +41,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

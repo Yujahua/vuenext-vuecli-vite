@@ -17,7 +17,8 @@
   </label>
 </template>
 
-<script>import {computed, inject} from '@vue/composition-api'
+<script>
+import {computed, inject} from 'vue'
 import Icon from '../icon'
 import radioMixin from './mixins'
 
@@ -92,7 +93,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-radio

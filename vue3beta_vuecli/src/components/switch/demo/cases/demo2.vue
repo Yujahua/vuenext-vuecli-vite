@@ -8,7 +8,8 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
+<script>
+import {ref} from 'vue'
 import {Switch} from '@csii/vx-mobile'
 
 export default {
@@ -20,7 +21,7 @@ export default {
   components: {
     [Switch.name]: Switch,
   },
-  step() {
+  setup() {
     const handler = (name, active) => {
       return console.log(`Status of switch ${name} is ${active ? 'active' : 'inactive'}`)
     }
@@ -31,4 +32,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

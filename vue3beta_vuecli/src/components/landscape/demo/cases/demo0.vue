@@ -62,8 +62,9 @@
   </div>
 </template>
 
-<script>import {Landscape, Toast, Button} from '@csii/vx-mobile'
-import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {Landscape, Toast, Button} from '@csii/vx-mobile'
+import {reactive, toRefs} from 'vue'
 
 export default {
   name: 'landscape-demo',
@@ -91,7 +92,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-landscape

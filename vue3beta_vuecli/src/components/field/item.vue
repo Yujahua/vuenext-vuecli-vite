@@ -31,7 +31,8 @@
   </div>
 </template>
 
-<script>import {computed, inject, toRefs} from '@vue/composition-api'
+<script>
+import {computed, inject, toRefs} from 'vue'
 import Icon from '../icon'
 import {isIOS, isAndroid} from '../_util'
 
@@ -104,7 +105,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-field-item

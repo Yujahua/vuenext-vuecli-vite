@@ -43,16 +43,19 @@
   </div>
 </template>
 
-<script>import {TextareaItem, Field} from '@csii/vx-mobile'
+<script>
+import {TextareaItem, Field} from '@csii/vx-mobile'
+import {ref} from 'vue'
 
 export default {
   name: 'tips-demo',
   /* DELETE */
   title: '普通文本域',
   /* DELETE */
-  data() {
+  setup() {
+    const value = ref('')
     return {
-      value: '',
+      value,
     }
   },
   components: {
@@ -60,4 +63,5 @@ export default {
     [Field.name]: Field,
   },
 }
-</script>
+
+</script>

@@ -38,7 +38,8 @@
 	</div>
 </template>
 
-<script>import {ref, reactive} from '@vue/composition-api'
+<script>
+import {ref, reactive} from 'vue'
 import {Button, Icon, Cashier, Toast, ActivityIndicator, NoticeBar} from '@csii/vx-mobile'
 
 export default {
@@ -193,7 +194,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-cashier

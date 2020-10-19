@@ -11,7 +11,8 @@
   </div>
 </template>
 
-<script>import {ref, reactive, onMounted} from '@vue/composition-api'
+<script>
+import {ref, reactive, onMounted} from 'vue'
 import {Picker, Dialog} from '@csii/vx-mobile'
 import simple from '@csii/vx-mobile/components/picker/demo/data/simple'
 
@@ -86,4 +87,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

@@ -21,9 +21,9 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
-// import {Field, CellItem, Switch} from '@csii/vx-mobile'
-import {CellItem, Switch} from '@csii/vx-mobile'
+<script>
+import {ref} from 'vue'
+import {Field, CellItem, Switch} from '@csii/vx-mobile'
 
 export default {
   name: 'cell-item-demo',
@@ -33,7 +33,7 @@ export default {
   align: 'right',
   /* DELETE */
   components: {
-    // [Field.name]: Field,
+    [Field.name]: Field,
     [CellItem.name]: CellItem,
     [Switch.name]: Switch,
   },
@@ -43,7 +43,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .holder

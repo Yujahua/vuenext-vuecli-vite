@@ -9,7 +9,8 @@
   </div>
 </template>
 
-<script>import {reactive, ref, onMounted} from '@vue/composition-api'
+<script>
+import {reactive, ref, onMounted} from 'vue'
 import {Steps} from '@csii/vx-mobile'
 
 export default {
@@ -49,4 +50,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

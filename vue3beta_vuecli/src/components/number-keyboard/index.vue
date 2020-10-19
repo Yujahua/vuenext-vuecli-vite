@@ -49,7 +49,8 @@
   </div>
 </template>
 
-<script>import {ref, watch, onMounted} from '@vue/composition-api'
+<script>
+import {ref, watch, onMounted} from 'vue'
 import Popup from '../popup'
 import Keyborad from './board'
 
@@ -134,7 +135,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-number-keyboard

@@ -25,7 +25,8 @@
   </div>
 </template>
 
-<script>import {watch, ref} from '@vue/composition-api'
+<script>
+import {watch, ref} from 'vue'
 import Popup from '../popup'
 import Icon from '../icon'
 
@@ -74,7 +75,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-landscape

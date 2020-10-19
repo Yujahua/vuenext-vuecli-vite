@@ -12,7 +12,8 @@
   </div>
 </template>
 
-<script>import {ref, computed} from '@vue/composition-api'
+<script>
+import {ref, computed} from 'vue'
 import createImageReader from './image-reader'
 import {dataURItoBlob} from './image-dataurl'
 import {functionToUrl, randomId} from '../_util'
@@ -167,7 +168,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-image-reader

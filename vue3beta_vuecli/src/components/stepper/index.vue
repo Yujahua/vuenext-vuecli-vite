@@ -26,7 +26,8 @@
   </div>
 </template>
 
-<script>import {ref, computed, watch, onMounted} from '@vue/composition-api'
+<script>
+import {ref, computed, watch, onMounted} from 'vue'
 import {warn} from '../_util'
 function getDecimalNum(num) {
   try {
@@ -210,7 +211,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-stepper

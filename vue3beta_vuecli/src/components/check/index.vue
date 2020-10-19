@@ -16,7 +16,8 @@
   </label>
 </template>
 
-<script>import {computed, inject} from '@vue/composition-api'
+<script>
+import {computed, inject} from 'vue'
 import Icon from '../icon'
 import checkMixin from './mixin'
 
@@ -82,7 +83,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-check

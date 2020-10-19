@@ -49,23 +49,14 @@
   </nav>
 </template>
 
-<script>import {
-  reactive,
-  computed,
-  toRefs,
-  watchEffect,
-  watch,
-  nextTick,
-  onBeforeUnmount,
-  onMounted,
-  ref,
-} from '@vue/composition-api'
-// import ScrollView from '../scroll-view' // ScrollView未升级
+<script>
+import {reactive, computed, toRefs, watch, nextTick, onBeforeUnmount, onMounted, ref} from 'vue'
+import ScrollView from '../scroll-view'
 
 export default {
   name: 'ui-tab-bar',
   components: {
-    // [ScrollView.name]: ScrollView,
+    [ScrollView.name]: ScrollView,
   },
 
   props: {
@@ -114,8 +105,8 @@ export default {
       }
     })
     let currentTab = computed(() => {
-      if (currentIndex) {
-        return props.items[currentIndex]
+      if (currentIndex.value) {
+        return props.items[currentIndex.value]
       }
     })
     // MARK: private events
@@ -135,7 +126,7 @@ export default {
       if (item.disabled) {
         return
       }
-      emit('change', item, index, currentIndex)
+      emit('change', item, index, currentIndex.value)
       state.currentName = item.name
       emit('input', item.name)
     }
@@ -152,15 +143,15 @@ export default {
       state.contentW = contentWidth
       refs.scroller.reflowScroller()
       nextTick(() => {
-        if (!refs.items || !refs.items[currentIndex]) {
+        if (!refs.items || !refs.items[currentIndex.value]) {
           return
         }
-        const target = refs.items[currentIndex]
+        const target = refs.items[currentIndex.value]
         state.inkWidth = target.offsetWidth * props.inkLength / 100
         state.inkPos = target.offsetLeft + (target.offsetWidth - state.inkWidth) / 2
 
-        const prevTarget = refs.items[currentIndex - 1]
-        const nextTarget = refs.items[currentIndex + 1]
+        const prevTarget = refs.items[currentIndex.value - 1]
+        const nextTarget = refs.items[currentIndex.value + 1]
 
         if (!prevTarget) {
           refs.scroller.scrollTo(0, 0, true)
@@ -183,13 +174,14 @@ export default {
       })
     }
 
-    watchEffect(
+    watch(
       () => ref(props.value),
       val => {
         if (val !== state.currentName) {
           state.currentName = val
         }
       },
+      {immediate: true},
     )
     watch(
       () => state.inkWidth,
@@ -209,7 +201,7 @@ export default {
       },
     )
     watch(
-      () => currentIndex,
+      () => currentIndex.value,
       () => {
         nextTick(function() {
           reflow()
@@ -217,7 +209,7 @@ export default {
       },
     )
     watch(
-      () => scrollable,
+      () => scrollable.value,
       () => {
         state.scrollerTmpKey = Date.now()
       },
@@ -227,7 +219,7 @@ export default {
       reflow()
       if (props.immediate) {
         nextTick(() => {
-          emit('change', props.items[currentIndex], currentIndex)
+          emit('change', props.items[currentIndex.value], currentIndex.value)
         })
       }
     })
@@ -245,7 +237,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-tab-bar

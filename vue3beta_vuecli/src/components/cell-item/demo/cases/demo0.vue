@@ -8,15 +8,15 @@
   </div>
 </template>
 
-<script>import {ref} from '@vue/composition-api'
-// import {Field, CellItem, Dialog, Icon} from '@csii/vx-mobile'
-import {CellItem, Dialog, Icon} from '@csii/vx-mobile'
+<script>
+import {ref} from 'vue'
+import {Field, CellItem, Dialog, Icon} from '@csii/vx-mobile'
 
 export default {
   name: 'cell-item-demo',
 
   components: {
-    // [Field.name]: Field,
+    [Field.name]: Field,
     [CellItem.name]: CellItem,
     [Icon.name]: Icon,
   },
@@ -31,4 +31,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>
