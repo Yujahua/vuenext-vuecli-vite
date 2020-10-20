@@ -74,7 +74,8 @@
   </div>
 </template>
 
-<script>import {watch} from '@vue/composition-api'
+<script>
+import {watch} from 'vue'
 import titleBarMixin from './mixins/title-bar'
 import Icon from '../icon'
 
@@ -136,7 +137,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .ui-popup-title-bar

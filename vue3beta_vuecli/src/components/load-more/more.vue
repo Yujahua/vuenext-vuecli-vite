@@ -10,7 +10,8 @@
     </slot>
   </div>
 </template>
-<script>import {computed} from '@vue/composition-api'
+<script>
+import {computed} from 'vue'
 export default {
   name: 'ui-more',
   props: {
@@ -73,7 +74,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 <style lang='stylus'>
 .ui-more
   width 100%

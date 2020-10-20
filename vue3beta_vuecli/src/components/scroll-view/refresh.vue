@@ -9,7 +9,8 @@
   </div>
 </template>
 
-<script>import {computed, getCurrentInstance} from '@vue/composition-api'
+<script>
+import {computed, getCurrentInstance} from 'vue'
 import Roller from '../activity-indicator/roller'
 
 export default {
@@ -80,7 +81,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-scroll-view-refresh

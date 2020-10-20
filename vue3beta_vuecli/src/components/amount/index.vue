@@ -1,6 +1,7 @@
 <template>
   <span class="ui-amount" :class="{numerical: !isCapital}">
-    <template v-if="!isCapital">{{doFormat(doPrecision(formatValue,legalPrecision, isRoundUp),hasSeparator, separator) }}</template> <template v-else> {{ doCapital(doPrecision(formatValue,4, isRoundUp)) }} </template>
+    <template v-if="!isCapital">{{doFormat(doPrecision(formatValue,legalPrecision, isRoundUp),hasSeparator, separator) }}</template>
+    <template v-else> {{ doCapital(doPrecision(formatValue,4, isRoundUp)) }} </template>
   </span>
 </template>
 

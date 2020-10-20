@@ -11,7 +11,8 @@
   </transition>
 </template>
 
-<script>import {inject, computed, watch, getCurrentInstance, onUnmounted} from '@vue/composition-api'
+<script>
+import {inject, computed, watch, getCurrentInstance, onUnmounted} from 'vue'
 export default {
   name: 'ui-tab-pane',
 
@@ -56,7 +57,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-tab-pane

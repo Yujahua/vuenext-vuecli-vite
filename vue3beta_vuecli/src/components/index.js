@@ -14,69 +14,67 @@ import BankList from './bank-list'
 import Bill from './bill'
 import BottomTab from './bottom-tab'
 import Button from './button'
-
+import Captcha from './captcha'
+import Cashier from './cashier'
+import CellItem from './cell-item'
+import Chart from './chart'
+import Check from './check'
+import CheckBox from './check-box'
+import CheckGroup from './check-group'
+import CheckList from './check-list'
+import Codebox from './codebox'
+import Col from './col'
+import DatePicker from './date-picker'
+import DetailItem from './detail-item'
+import Dialog from './dialog'
+import DropMenu from './drop-menu'
+import Field from './field'
+import FieldItem from './field-item'
+import GraphicList from './graphic-list'
 import Icon from './icon'
-
+import ImageReader from './image-reader'
+import ImageViewer from './image-viewer'
+import InputItem from './input-item'
+import Landscape from './landscape'
+import LoadMore from './load-more'
+import More from './more'
+import NumberKeyboard from './number-keyboard'
+import NoticeBar from './notice-bar'
 import Popup from './popup'
-// import NumberKeyboard from './number-keyboard'
-// import PopupTitleBar from './popup-title-bar'
-// import Toast from './toast'
-// import Dialog from './dialog'
-// import Transition from './transition'
-// import Tag from './tag'
-// import Stepper from './stepper'
-// import Field from './field'
-// import FieldItem from './field-item'
-// import CellItem from './cell-item'
-// import Switch from './switch'
-// import WaterMark from './water-mark'
-// import DetailItem from './detail-item'
-// import Codebox from './codebox'
-// import Captcha from './captcha'
-// import GraphicList from './graphic-list'
-// import ImageReader from './image-reader'
-// import Cashier from './cashier'
-// import Swiper from './swiper'
-// import SwiperItem from './swiper-item'
-// import Chart from './chart'
-// import Check from './check'
-// import CheckBox from './check-box'
-// import CheckGroup from './check-group'
-// import CheckList from './check-list'
-// import DatePicker from './date-picker'
-// import Picker from './picker'
-// import Col from './col'
-// import Radio from './radio'
-// import RadioGroup from './radio-group'
-// import RadioBox from './radio-box'
-// import RadioList from './radio-list'
-// import DropMenu from './drop-menu'
-// import Landscape from './landscape'
-// import TabBar from './tab-bar'
-// import NoticeBar from './notice-bar'
-// import InputItem from './input-item'
-// import LoadMore from './load-more'
-// import VerifyCode from './verify-code'
-// import Tip from './tip'
-// import TextareaItem from './textarea-item'
-// import Steps from './steps'
-// import Slider from './slider'
-// import Skeleton from './skeleton'
-// import Row from './row'
-// import ResultPage from './result-page'
-// import Progress from './progress'
-// import Tabs from './tabs'
-// import TabPane from './tab-pane'
-// import Ruler from './ruler'
-// import TabPicker from './tab-picker'
-// import ScrollView from './scroll-view'
-// import ScrollViewRefresh from './scroll-view-refresh'
-// import ScrollViewMore from './scroll-view-more'
-// import Selector from './selector'
-// import SelectorGidc from './selector-gidc'
-// import Refresh from './refresh'
-// import More from './more'
-// import ImageViewer from './image-viewer'
+import PopupTitleBar from './popup-title-bar'
+import Picker from './picker'
+import Progress from './progress'
+import Radio from './radio'
+import RadioBox from './radio-box'
+import RadioGroup from './radio-group'
+import RadioList from './radio-list'
+import Refresh from './refresh'
+import ResultPage from './result-page'
+import Row from './row'
+import Ruler from './ruler'
+import ScrollView from './scroll-view'
+import ScrollViewMore from './scroll-view-more'
+import ScrollViewRefresh from './scroll-view-refresh'
+import Selector from './selector'
+import SelectorGidc from './selector-gidc'
+import Skeleton from './skeleton'
+import Slider from './slider'
+import Stepper from './stepper'
+import Steps from './steps'
+import Swiper from './swiper'
+import SwiperItem from './swiper-item'
+import Switch from './switch'
+import TabBar from './tab-bar'
+import TabPane from './tab-pane'
+import TabPicker from './tab-picker'
+import Tabs from './tabs'
+import Tag from './tag'
+import TextareaItem from './textarea-item'
+import Tip from './tip'
+import Toast from './toast'
+import Transition from './transition'
+import VerifyCode from './verify-code'
+import WaterMark from './water-mark'
 /* @init<%import ${componentNameUpper} from './${componentName}'%> */
 
 // Totally importing reminder
@@ -94,73 +92,73 @@ export const components = {
   ActionBar,//测
   ActionSheet,//测
   ActivityIndicator,//测
-  Agree,
-  Amount,
-  BankList,
-  Bill,
-  BottomTab,
+  Agree,//测
+  Amount,//测
+  BankList,//测
+  Bill,//测
+  BottomTab,//测
   Button,//测
+  Captcha,//测
+  Cashier,//测
+  CellItem,//测
+  Chart,//测
+  Check,//测
+  CheckBox,//测
+  CheckGroup,//测
+  CheckList,//测
+  Codebox,//测
+  Col,//测
+  DatePicker,//测
+  DetailItem,//测
+  Dialog,//测
+  DropMenu,//测
+  Field,//测
+  FieldItem,//测
+  GraphicList,//测
   Icon,//测
-  Popup,
-  // NumberKeyboard,
-  // PopupTitleBar,
-  // Dialog,
-  // Toast,
-  // Transition,
-  // Tag,
-  // Stepper,
-  // Field,
-  // FieldItem,
-  // CellItem,
-  // Switch,
-  // WaterMark,
-  // DetailItem,
-  // Codebox,
-  // Captcha,
-  // GraphicList,
-  // ImageReader,
-  // Cashier,
-  // Swiper,
-  // SwiperItem,
-  // Chart,
-  // Check,
-  // CheckBox,
-  // CheckGroup,
-  // CheckList,
-  // DatePicker,
-  // Picker,
-  // Col,
-  // Radio,
-  // RadioGroup,
-  // RadioBox,
-  // RadioList,
-  // DropMenu,
-  // Landscape,
-  // TabBar,
-  // NoticeBar,
-  // InputItem,
-  // LoadMore,
-  // VerifyCode,
-  // Tip,
-  // TextareaItem,
-  // Steps,
-  // Slider,
-  // Skeleton,
-  // Row,
-  // ResultPage,
-  // Progress,
-  // Tabs,
-  // TabPane,
-  // Ruler,
-  // TabPicker,
-  // ScrollView,
-  // ScrollViewRefresh,
-  // ScrollViewMore,
-  // Selector,
-  // SelectorGidc,
-  // Refresh,
-  // More,
-  // ImageViewer,
+  ImageReader,//测
+  ImageViewer,
+  InputItem,//测
+  Landscape,//测
+  LoadMore,//测
+  More,
+  NoticeBar,//测
+  NumberKeyboard,//测
+  Picker,//测
+  Popup,//测
+  PopupTitleBar,//测
+  Progress,
+  Radio,//测
+  RadioGroup,//测
+  RadioBox,//测
+  RadioList,//测
+  Refresh,
+  ResultPage,
+  Row,
+  Ruler,
+  ScrollView,
+  ScrollViewRefresh,
+  ScrollViewMore,
+  Selector,
+  SelectorGidc,
+  Skeleton,//测
+  Slider,//测
+  Stepper,//测
+  Steps,//测
+  Swiper,//测
+  SwiperItem,//测
+  Switch,//测
+  TabBar,//测
+  TabPane,
+  TabPicker,
+  Tabs,
+  Tag,//测
+  TextareaItem,//测
+  Tip,//测
+  Toast,//测
+  Transition,//测
+  VerifyCode,//测
+  WaterMark,//测
   /* @init<%${componentNameUpper},%> */
 }
 

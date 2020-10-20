@@ -14,8 +14,9 @@
   </div>
 </template>
 
-<script>import {ActionSheet, Button, Dialog} from '@csii/vx-mobile'
-import {reactive, toRefs} from '@vue/composition-api'
+<script>
+import {ActionSheet, Button, Dialog} from '@csii/vx-mobile'
+import {reactive, toRefs} from 'vue'
 
 export default {
   name: 'action-sheet-demo',
@@ -67,4 +68,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

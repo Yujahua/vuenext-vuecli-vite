@@ -11,7 +11,8 @@
     </slot>
   </div>
 </template>
-<script>import {computed, ref} from '@vue/composition-api'
+<script>
+import {computed, ref} from 'vue'
 export default {
   name: 'ui-refresh',
   props: {
@@ -84,7 +85,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 <style lang='stylus'>
 .ui-refresh
   width 100%

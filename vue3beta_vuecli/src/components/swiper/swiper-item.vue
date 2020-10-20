@@ -6,7 +6,8 @@
   </div>
 </template>
 
-<script>import {computed, onMounted, getCurrentInstance, onUnmounted} from '@vue/composition-api'
+<script>
+import {computed, onMounted, getCurrentInstance, onUnmounted} from 'vue'
 export default {
   name: 'ui-swiper-item',
   setup(props, {parent}) {
@@ -21,7 +22,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
   .ui-swiper-item

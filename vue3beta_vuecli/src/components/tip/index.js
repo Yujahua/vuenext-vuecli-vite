@@ -1,4 +1,4 @@
-import {createApp, onMounted, ref, getCurrentInstance, onBeforeUnmount} from '@vue/composition-api'
+import {createApp, onMounted, ref, getCurrentInstance, onBeforeUnmount} from 'vue'
 // import Vue from 'vue'
 import TipOptions from './tip'
 import {randomId} from '../_util'
