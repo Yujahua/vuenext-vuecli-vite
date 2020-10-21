@@ -4,7 +4,7 @@
       :steps="steps"
       :current="2"
     >
-      <template slot="icon" slot-scope="props">
+      <template name="icon" v-slot="props">
         <b v-if="props.index === props.currentIndex">{{ props.index }}</b>
         <span v-else>{{ props.index }}</span>
       </template>
@@ -13,17 +13,17 @@
       :steps="steps"
       :current="2"
     >
-      <template slot="reached" slot-scope="props">
+      <template name="reached" v-slot="props">
         <!-- props.index -->
         <ui-icon name="checked" v-if="props.index === 1"></ui-icon>
         <div class="step-node-default" v-else>
           <div class="step-node-default-icon" style="width: 6px;height: 6px;border-radius: 50%;"></div>
         </div>
       </template>
-      <template slot="current">
+      <template v-slot:current>
         <ui-icon name="location"></ui-icon>
       </template>
-      <template slot="unreached">
+      <template v-slot:unreached>
         <ui-icon name="time"></ui-icon>
       </template>
     </ui-steps>

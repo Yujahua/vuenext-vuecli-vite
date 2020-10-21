@@ -13,7 +13,7 @@
       @pay="onCashierPay"
       @cancel="onCashierCancel"
     >
-      <div slot-scope="{ scene }" slot="header">
+      <template v-slot:header="{ scene }">
         <ui-notice-bar
           v-if="scene === 'choose'"
           mode="closable"
@@ -22,18 +22,18 @@
         >
           该银行3:00-12:00系统维护，请更换其他银行卡
         </ui-notice-bar>
-      </div>
-      <div slot-scope="{ scene }" slot="footer">
+      </template>
+      <template v-slot:footer="{ scene }">
         <div v-if="scene === 'choose' && !isCashierInitialed" class="cashier-loading">
           <ui-activity-indicator :size="30" vertical>加载中...</ui-activity-indicator>
         </div>
-      </div>
-      <div slot="payButton" style="display:flex;">
+      </template>
+      <template v-slot:payButton style="display:flex;">
         <ui-icon name="checked"></ui-icon>发起支付
-      </div>
-      <div slot="scene" class="custom-scene">
+      </template>
+      <template v-slot:scene class="custom-scene">
         Custom Scene
-      </div>
+      </template>
     </ui-cashier>
 	</div>
 </template>

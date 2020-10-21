@@ -17,8 +17,9 @@
       </div>
     </div>
     <div class="ui-swiper-indicators" :class="{'disabled': !hasDots}" v-if="oItemCount > 1 && hasDots">
-      <template v-for="index in oItemCount">
+      <template>
         <div
+          v-for="index in oItemCount"
           class="ui-swiper-indicator"
           :key="index"
           :class="{ 'ui-swiper-indicator-active': index - 1 === realIndex }"
@@ -474,7 +475,7 @@ export default {
       if (autoplay < 500) {
         return
       }
-      props.autoplay = autoplay || props.autoplay
+      autoplay = autoplay || props.autoplay
       startPlay()
       state.isStoped = false
     }

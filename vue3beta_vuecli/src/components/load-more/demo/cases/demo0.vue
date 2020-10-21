@@ -3,20 +3,21 @@
       ref='loadMore'
       @on-refresh='onRefresh'
       @on-load='onLoadMore'>
+      <slot name='refresh'>
       <ui-refresh
-      slot='refresh'
-      slot-scope='{ refreshing, refreshActive }'
+      v-slot='{ refreshing, refreshActive }'
       :refreshing='refreshing'
       :refresh-active='refreshActive'
       />
+      </slot>
         <div v-for='i in list'
         :key='i' class='scroll-view-item'>{{i}}</div>
+      <slot name='more'>
       <ui-more
-      slot='more'
-      slot-scope='{ loading, loadActive, noMore }'
+      v-slot='{ loading, loadActive, noMore }'
       :loading='loading'
       :load-active='loadActive'
-      :no-more='noMore'/>
+      :no-more='noMore'/></slot>
     </ui-load-more>
 </template>
 <script>

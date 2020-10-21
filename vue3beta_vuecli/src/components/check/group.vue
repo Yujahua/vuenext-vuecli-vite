@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script>vue
+<script>
 import {provide, getCurrentInstance} from 'vue'
 import Check from './index'
 

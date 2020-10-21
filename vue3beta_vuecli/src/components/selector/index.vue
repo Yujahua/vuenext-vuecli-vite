@@ -53,7 +53,7 @@
               :icon-svg="iconSvg"
               @change="onSelectorChoose"
             >
-              <template slot-scope="{ option, index, selected }">
+              <template v-slot="{ option, index, selected }">
                 <slot :option="option" :index="index" :selected="selected"></slot>
               </template>
             </ui-radio-list>
@@ -74,7 +74,7 @@
               :icon-size="iconSize"
               :icon-svg="iconSvg"
             >
-              <template slot-scope="{ option, index, selected }">
+              <template v-slot="{ option, index, selected }">
                 <slot :option="option" :index="index" :selected="selected"></slot>
               </template>
             </ui-check-list>

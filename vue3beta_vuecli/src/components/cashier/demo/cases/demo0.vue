@@ -171,7 +171,7 @@ export default {
     }
     const onCashierCancel = () => {
       // Abort pay request or checking request
-      timer && clearTimeout(timer)
+      timer.value && clearTimeout(timer.value)
     }
     return {
       isCashierhow,

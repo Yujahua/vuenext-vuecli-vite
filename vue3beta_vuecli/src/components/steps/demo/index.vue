@@ -10,7 +10,8 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 import Demo1 from './cases/demo1'
 import Demo2 from './cases/demo2'
@@ -22,7 +23,8 @@ import Demo7 from './cases/demo7'
 import Demo8 from './cases/demo8'
 
 export default {...createDemoModule('steps', [Demo0, Demo1, Demo2, Demo3, Demo4, Demo5, Demo6, Demo7, Demo8])}
-</script>
+
+</script>
 
 <style lang="stylus" scoped>
 .ui-example-content

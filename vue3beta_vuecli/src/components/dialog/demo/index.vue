@@ -10,12 +10,14 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 import Demo1 from './cases/demo1'
 
 export default {...createDemoModule('dialog', [Demo0, Demo1])}
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-dialog .ui-button

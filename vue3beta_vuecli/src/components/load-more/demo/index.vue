@@ -10,11 +10,13 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 
 export default {...createDemoModule('load-more', [Demo0])}
-</script>
+
+</script>
 <style>
 .selecotor-gidc .ui-example-section .ui-example-content{
   background-color: #fff;

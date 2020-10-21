@@ -2,8 +2,8 @@
   <div class="ui-example-child ui-example-child-image-reader">
     <div>
       <ul>
-        <template v-for="(item, index) in imgs">
-          <li @click="showViewer(index, $event)" :key="index">
+        <template>
+          <li v-for="(item, index) in imgs" @click="showViewer(index, $event)" :key="index">
             <div class="img"
               :style="`background: url(${item}) center no-repeat;background-size:cover;`">
             </div>

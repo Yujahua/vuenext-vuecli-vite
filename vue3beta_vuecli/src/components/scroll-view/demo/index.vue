@@ -10,7 +10,8 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 import Demo1 from './cases/demo1'
 import Demo2 from './cases/demo2'
@@ -20,4 +21,5 @@ import Demo5 from './cases/demo5'
 import Demo6 from './cases/demo6'
 
 export default {...createDemoModule('scroll-view', [Demo0, Demo1, Demo2, Demo3, Demo4, Demo5, Demo6])}
-</script>
+
+</script>

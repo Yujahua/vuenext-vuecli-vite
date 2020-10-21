@@ -4,14 +4,16 @@
       <div class="ui-picker-column-masker top" :style="{ height: `${style.maskerHeight}px` }"></div>
       <div class="ui-picker-column-masker bottom" :style="{ height: `${style.maskerHeight}px` }"></div>
       <div class="ui-picker-column-list">
-        <template v-for="(colunm, i) in columnValues">
+        <template>
           <div
+            v-for="(colunm, i) in columnValues"
             class="ui-picker-column-item"
             :key="i"
           >
             <ul class="column-list" :style="{ 'padding-top': `${style.maskerHeight}px` }">
-              <template v-for="(item, j) in colunm">
+              <template>
                 <li
+                  v-for="(item, j) in colunm"
                   class="column-item"
                   :class="{
                     'active': isColumnIndexActive(i, j),

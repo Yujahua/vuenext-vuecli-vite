@@ -2,13 +2,16 @@
   <div class="ui-example-child ui-example-child-stepper ui-example-child-stepper-4">
     <ui-field>
       <ui-field-item title="最小值4大于默认值">
-        <ui-stepper slot="right" :min="4" />
+        <slot name="right">
+          <ui-stepper :min="4" />
+        </slot>
       </ui-field-item>
     </ui-field>
   </div>
 </template>
 
-<script>import {Stepper, Field, FieldItem} from '@csii/vx-mobile'
+<script>
+import {Stepper, Field, FieldItem} from '@csii/vx-mobile'
 
 export default {
   name: 'stepper-demo',
@@ -22,4 +25,5 @@ export default {
     [Stepper.name]: Stepper,
   },
 }
-</script>
+
+</script>

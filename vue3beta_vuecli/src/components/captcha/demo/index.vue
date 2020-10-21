@@ -1,4 +1,4 @@
-<<template>
+<template>
   <div class="ui-example captcha">
     <section class="ui-example-section" v-for="(demo, index) in demos" :key="index">
       <div class="ui-example-title" v-html="demo.title || '基础'"></div>
@@ -9,11 +9,13 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 import Demo1 from './cases/demo1'
 export default {...createDemoModule('captcha', [Demo0, Demo1])}
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example.captcha

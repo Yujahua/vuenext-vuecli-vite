@@ -36,7 +36,7 @@
         Popup Top
         <ui-icon
           name="close"
-          @click.native="hidePopUp('top')"
+          @click.enter="hidePopUp('top')"
         ></ui-icon>
       </div>
     </ui-popup>

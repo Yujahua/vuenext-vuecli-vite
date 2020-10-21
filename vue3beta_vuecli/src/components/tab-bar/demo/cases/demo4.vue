@@ -5,7 +5,7 @@
       :items="items"
       :has-ink="false"
     >
-      <template slot="item" slot-scope="{ item }">
+      <template name="item" v-slot="{ item }">
         <div class="custom-item">
           <div class="icon">
             <ui-icon :name="item.icon" />

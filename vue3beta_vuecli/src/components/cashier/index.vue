@@ -33,12 +33,11 @@
             :channels="channels"
             :channelLimit="channelLimit"
             :default-index="defaultIndex"
-            v-on="$listeners"
           >
             <slot name="channel"></slot>
-            <template slot="button">
+            <slot name="button">
               <slot name="payButton"></slot>
-            </template>
+            </slot>
           </ui-cashier-channel>
         </div>
 

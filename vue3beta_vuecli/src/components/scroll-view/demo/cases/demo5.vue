@@ -12,8 +12,8 @@
       ref="scrollView"
       :scrolling-x="false"
       @scroll="onScroll"
-      @mousedown.native="onScrollStart"
-      @touchstart.native="onScrollStart"
+      @mousedown.enter="onScrollStart"
+      @touchstart.enter="onScrollStart"
     >
       <div
         v-for="i in category"

@@ -2,7 +2,9 @@
   <div class="ui-example-child ui-example-child-stepper ui-example-child-stepper-3">
     <ui-field>
       <ui-field-item title="步进2, 只允许输入整数">
-        <ui-stepper slot="right" v-model="value" :step="2" :min="2" is-integer />
+        <slot name="right">
+          <ui-stepper v-model="value" :step="2" :min="2" is-integer />
+        </slot>
       </ui-field-item>
     </ui-field>
   </div>

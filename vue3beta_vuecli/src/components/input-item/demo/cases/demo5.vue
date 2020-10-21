@@ -15,13 +15,14 @@
         clearable
         @blur="checkBankCard"
       >
+      <slot name="error">
         <p
           v-if="isError"
           class="error"
-          slot="error"
         >
           不支持当前银行<span class="error-action" @click="bankCardTip">查看支持银行</span>
         </p>
+      </slot>
       </ui-input-item>
     </ui-field>
   </div>

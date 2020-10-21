@@ -32,8 +32,8 @@
         ref="input11"
         placeholder="left/right slots"
       >
-        <ui-icon name="bank-zs" slot="left" svg></ui-icon>
-        <ui-icon name="info" slot="right" @click.native="onClick"></ui-icon>
+        <slot name="left"><ui-icon name="bank-zs" svg></ui-icon></slot>
+        <slot name="right"><ui-icon name="info" @click.enter="onClick"></ui-icon></slot>
       </ui-input-item>
     </ui-field>
   </div>

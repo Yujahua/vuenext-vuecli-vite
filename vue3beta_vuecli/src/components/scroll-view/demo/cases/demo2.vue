@@ -5,13 +5,13 @@
       :scrolling-x="false"
       @refreshing="onRefresh"
     >
+      <slot name="refresh">
       <ui-scroll-view-refresh
-        slot="refresh"
-        slot-scope="{ scrollTop, isRefreshActive, isRefreshing }"
+        v-slot="{ scrollTop, isRefreshActive, isRefreshing }"
         :scroll-top="scrollTop"
         :is-refreshing="isRefreshing"
         :is-refresh-active="isRefreshActive"
-      ></ui-scroll-view-refresh>
+      ></ui-scroll-view-refresh></slot>
       <div
         v-for="i in list"
         :key="i"

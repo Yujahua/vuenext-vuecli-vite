@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import {Button} from '../../../index'
+import {Button} from '@csii/vx-mobile'
 
 export default {
   name: 'button-demo',

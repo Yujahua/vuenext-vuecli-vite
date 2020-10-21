@@ -3,12 +3,12 @@
     <ui-field>
       <ui-skeleton avatar title :loading="loading" :row="2" class="skeleton-item">
         <ui-cell-item title="交通银行" brief="展示摘要描述" addon="附加文案" arrow>
-          <span class="holder" slot="left"></span>
+          <slot name="left" class="holder"></slot>
         </ui-cell-item>
       </ui-skeleton>
       <ui-skeleton avatar title :loading="loading" :row="2" class="skeleton-item">
         <ui-cell-item title="招商银行" brief="展示摘要描述" addon="附加文案" arrow>
-          <span class="holder" slot="left"></span>
+          <slot name="left" class="holder"></slot>
         </ui-cell-item>
       </ui-skeleton>
     </ui-field>

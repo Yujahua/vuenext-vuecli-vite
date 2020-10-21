@@ -58,9 +58,10 @@
       v-model="slotDialog.open"
       :btns="slotDialog.btns"
     >
-      <div class="dialog-banner" slot="header">
+      <solt name="header">
+        <div class="dialog-banner">
         <img src="http://img-hxy021.didistatic.com/static/strategymis/insurancePlatform_spu/uploads/27fb7f097ca218d743f816836bc7ea4a" alt="">
-      </div>
+      </div></solt>
       虽然其中有一些争吵、不愉快、曲折，但重要的是一家人整整齐齐。
     </ui-dialog>
   </div>

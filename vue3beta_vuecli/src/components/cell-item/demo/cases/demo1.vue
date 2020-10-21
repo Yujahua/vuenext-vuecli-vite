@@ -4,13 +4,13 @@
       <ui-cell-item title="余额" addon="可用8000.34" arrow />
       <ui-cell-item title="余额" addon="可用8000.34" />
       <ui-cell-item title="使用余额">
-        <ui-switch slot="right" v-model="open" />
+        <solt name="right"><ui-switch v-model="open" /></solt>
       </ui-cell-item>
       <ui-cell-item title="使用余额" disabled>
-        <ui-switch slot="right" :value="true" disabled/>
+        <solt name="right"><ui-switch :value="true" disabled/></solt>
       </ui-cell-item>
       <ui-cell-item title="余额" addon="可用8000.34" arrow no-border>
-        <div class="holder" slot="left"></div>
+        <solt class="holder" name="left"></solt>
       </ui-cell-item>
     </ui-field>
   </div>

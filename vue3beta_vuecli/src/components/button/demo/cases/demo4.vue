@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import {Button, Icon} from '../../../index'
+import {Button, Icon} from '@csii/vx-mobile'
 
 export default {
   name: 'button-demo',

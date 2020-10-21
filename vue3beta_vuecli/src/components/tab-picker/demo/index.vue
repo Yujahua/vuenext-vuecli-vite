@@ -10,10 +10,12 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 
 export default {
   ...createDemoModule('tab-bar', [Demo0]),
 }
-</script>
+
+</script>

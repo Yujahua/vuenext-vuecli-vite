@@ -7,7 +7,7 @@
         arrow="arrow-right"
         align="right"
         :content="datePickerValue"
-        @click.native="isDatePickerShow = true">
+        @click.enter="isDatePickerShow = true">
       </ui-field-item>
     </ui-field>
     <ui-date-picker

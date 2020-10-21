@@ -18,7 +18,7 @@
           fill-color="#111A34"
           type="fill"
           font-color="#fff"
-          @click.native="onDeleteImage('reader1', index)"
+          @click.enter="onDeleteImage('reader1', index)"
         >
           <ui-icon name="close"></ui-icon>
         </ui-tag>

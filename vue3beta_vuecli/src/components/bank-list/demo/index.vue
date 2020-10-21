@@ -10,13 +10,15 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 
 export default {
   ...createDemoModule('bank-list', [Demo0]),
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example.bank-list

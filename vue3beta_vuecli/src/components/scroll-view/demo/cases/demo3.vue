@@ -12,11 +12,11 @@
       >
         <p class="scroll-view-item">{{i}}</p>
       </div>
+      <slot name="more">
       <ui-scroll-view-more
-        slot="more"
         :is-finished="isFinished"
       >
-      </ui-scroll-view-more>
+      </ui-scroll-view-more></slot>
     </ui-scroll-view>
   </div>
 </template>

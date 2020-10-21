@@ -10,14 +10,16 @@
 	</div>
 </template>
 
-<script>import createDemoModule from '../../../examples/create-demo-module'
+<script>
+import createDemoModule from '../../../../examples/create-demo-module'
 import Demo0 from './cases/demo0'
 // import Demo1 from './cases/demo1'
 
 export default {
   ...createDemoModule('bill', [Demo0]),
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example.bill

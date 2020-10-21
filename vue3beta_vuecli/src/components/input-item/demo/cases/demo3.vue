@@ -1,13 +1,14 @@
 <template>
   <div class="ui-example-child ui-example-child-input-item-3">
     <ui-field title="转出金额(元)">
+      <slot name="action">
       <div
         class="field-operator"
-        slot="action"
         @click="onClick"
       >
         <ui-icon name="info"></ui-icon>
       </div>
+      </slot>
       <ui-input-item
         type="money"
         v-model="value"
@@ -17,7 +18,9 @@
         is-amount
         is-highlight
       >
-        <div class="input-operator" slot="right" @click="takeAll">全部取出</div>
+        <slot name="right">
+          <div class="input-operator" @click="takeAll">全部取出</div>
+        </slot>
       </ui-input-item>
     </ui-field>
   </div>

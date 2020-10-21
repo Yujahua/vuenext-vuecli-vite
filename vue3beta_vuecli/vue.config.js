@@ -26,7 +26,10 @@ module.exports = {
     },
     // publicPath: '/'         // default
     outputDir: 'lib',          // default: dist
-    productionSourceMap: false,
+    productionSourceMap: false, // 生成map后缀文件，对压缩代码错误追踪调试，生产环境关闭
+    css: {
+        extract: true           // production set true
+    },
     configureWebpack: config => {   // todo after vue.cofing settings
         if (process.env.NODE_ENV === 'production') {
           // 为生产环境修改配置...

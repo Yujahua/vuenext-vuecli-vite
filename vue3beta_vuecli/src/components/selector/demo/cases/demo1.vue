@@ -18,11 +18,11 @@
       iconSize="lg"
       @choose="onSelectorChoose"
     >
-      <div class="selector-header" slot="header">
+      <template class="selector-header" v-slot:header>
         Header Slot
-      </div>
-      <template slot-scope="{ option, index, selected }">
-        <!-- <div class="ui-selector-custom-brief">{{ option.text }}使用slot-scope</div> -->
+      </template>
+      <template v-slot="{ option, index, selected }">
+        <!-- <div class="ui-selector-custom-brief">{{ option.text }}使用v-slot</div> -->
         <div class="selector-item-body" :class="{disabled: option.disabled, selected}">
           <div class="selector-item-left">
             <span class="holder" v-text="option.value"></span>
@@ -33,9 +33,9 @@
           </div>
         </div>
       </template>
-      <div class="selector-footer" slot="footer">
+      <template class="selector-footer" v-slot:footer>
         Footer Slot
-      </div>
+      </template>
     </ui-selector>
   </div>
 </template>
@@ -64,23 +64,23 @@ export default {
           {
             value: 'A',
             text: '选项一',
-            describe: '使用slot-scope',
+            describe: '使用v-slot',
           },
           {
             value: 'B',
             text: '选项二',
-            describe: '使用slot-scope',
+            describe: '使用v-slot',
           },
           {
             value: 'C',
             text: '选项三',
-            describe: '使用slot-scope',
+            describe: '使用v-slot',
             disabled: true,
           },
           {
             value: 'D',
             text: '选项四',
-            describe: '使用slot-scope',
+            describe: '使用v-slot',
           },
         ],
       ],

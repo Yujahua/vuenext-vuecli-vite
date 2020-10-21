@@ -5,7 +5,7 @@
       <img src="//manhattan.didistatic.com/static/manhattan/do1_6VL7HL8TYaUMsIfygfpz">
     </ui-landscape>
 
-    <ui-button @click.native="showMaskClosable=true;">点击蒙层关闭</ui-button>
+    <ui-button @click.enter="showMaskClosable=true;">点击蒙层关闭</ui-button>
     <ui-landscape v-model="showMaskClosable" :mask-closable="true">
       <img src="//manhattan.didistatic.com/static/manhattan/do1_6VL7HL8TYaUMsIfygfpz">
     </ui-landscape>
