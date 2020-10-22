@@ -1,8 +1,9 @@
 <template>
   <div class="ui-drop-menu">
     <div class="ui-drop-menu-bar">
-      <template v-for="(item, index) in data">
+      <template>
         <div
+          v-for="(item, index) in data"
           class="bar-item"
           :class="{
             active: index === activeMenuBarIndex,
@@ -35,9 +36,9 @@
           align-center
           @change="onListItemClick"
         >
-          <div slot-scope="{ option }">
+          <template v-slot="{ option }">
             <slot :option="option"></slot>
-          </div>
+          </template>
         </ui-radio-list>
       </div>
     </ui-popup>
