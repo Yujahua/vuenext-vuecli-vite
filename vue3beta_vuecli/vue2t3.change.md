@@ -12,6 +12,7 @@ Docs: [no-deprecated-v-on-native-modifier](https://eslint.vuejs.org/rules/no-dep
 3. `.sync` modifier on 'v-bind' directive is deprecated. Use 'v-model:propName' instead
 
 More: Inline templates attributes are deprecated.
+Solution: remove `.sync`
 
 4. `$scopedSlots` attributes are deprecated, use `$slots` instead.
 
@@ -30,10 +31,4 @@ Solution: use `v-slot` attribute instead.
 
 Docs: [vue/no-deprecated-slot-scope-attribute](https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/no-deprecated-v-bind-sync.md)
 
-7. [Not belong to other changes]
-
-ant/element-ui form validate style [async validator](https://github.com/yiminghe/async-validator) (mobild form validation should keep pace with mobile )
-
-Solution: unsolved problem
-
-8. 
+7. Disallow using deprecated `$listeners` (in Vue.js 3.0.0+)
