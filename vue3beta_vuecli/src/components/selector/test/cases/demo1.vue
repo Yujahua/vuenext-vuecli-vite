@@ -21,7 +21,7 @@
       <div class="selector-header" slot="header">
         Header Slot
       </div>
-      <template slot-scope="{ option, index, selected }">
+      <template v-slot="{ option, index, selected }">
         <!-- <div class="ui-selector-custom-brief">{{ option.text }}使用slot-scope</div> -->
         <div class="selector-item-body" :class="{disabled: option.disabled, selected}">
           <div class="selector-item-left">
@@ -40,7 +40,8 @@
   </div>
 </template>
 
-<script>import {Selector, Field, FieldItem} from '@csii/vx-mobile'
+<script>
+import {Selector, Field, FieldItem} from '@csii/vx-mobile'
 
 export default {
   name: 'selector-demo',
@@ -94,7 +95,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-selector-1

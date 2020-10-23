@@ -13,7 +13,7 @@
       <p class="text">
         通过<b>作用域插槽</b>的坐标属性(coord)可以对水印行列进行定制
       </p>
-      <div slot="watermark" slot-scope="props">
+      <div v-slot:watermark="props">
         <span v-if="props.coord.row % 2 "> 奇数行</span>
         <span v-else>偶数行</span>
       </div>
@@ -21,7 +21,8 @@
 	</div>
 </template>
 
-<script>import {WaterMark} from '@csii/vx-mobile'
+<script>
+import {WaterMark} from '@csii/vx-mobile'
 
 export default {
   name: 'water-mark-demo',
@@ -33,7 +34,8 @@ export default {
     [WaterMark.name]: WaterMark,
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-water-mark-0

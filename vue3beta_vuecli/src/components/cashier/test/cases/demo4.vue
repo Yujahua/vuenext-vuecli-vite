@@ -7,7 +7,7 @@
       :payment-amount="cashierAmount"
       payment-describe="关于支付金额的特殊说明"
     >
-      <div slot-scope="{ scene }" slot="header">
+      <template v-slot:header="{ scene }">
         <ui-notice-bar
           v-if="scene === 'choose'"
           mode="closable"
@@ -16,12 +16,13 @@
         >
           该银行3:00-12:00系统维护，请更换其他银行卡
         </ui-notice-bar>
-      </div>
+      </template>
     </ui-cashier>
 	</div>
 </template>
 
-<script>import {Button, Cashier, NoticeBar} from '@csii/vx-mobile'
+<script>
+import {Button, Cashier, NoticeBar} from '@csii/vx-mobile'
 
 export default {
   name: 'cashier-demo',
@@ -54,7 +55,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-cashier

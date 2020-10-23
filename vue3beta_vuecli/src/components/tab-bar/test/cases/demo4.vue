@@ -1,7 +1,7 @@
 <template>
   <div class="ui-example-child ui-example-child-tabs ui-example-child-tab-bar-4">
     <ui-tab-bar v-model="current" :items="items">
-      <template slot="item" slot-scope="{ item }">
+      <template v-slot:item="{ item }">
         <ui-icon :name="item.icon" />
         <span v-text="item.label"></span>
       </template>
@@ -9,7 +9,8 @@
   </div>
 </template>
 
-<script>import {TabBar, Icon} from '@csii/vx-mobile'
+<script>
+import {TabBar, Icon} from '@csii/vx-mobile'
 
 export default {
   name: 'tab-bar-demo',
@@ -29,4 +30,5 @@ export default {
     }
   },
 }
-</script>
+
+</script>

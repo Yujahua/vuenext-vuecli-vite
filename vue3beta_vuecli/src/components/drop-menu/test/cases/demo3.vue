@@ -1,7 +1,7 @@
 <template>
   <div class="ui-example-child ui-example-child-drop-menu ui-example-child-drop-menu-3">
     <ui-drop-menu :data="data">
-      <template slot-scope="{ option }">
+      <template v-slot="{ option }">
         <div class="ui-drop-menu-custom-title" v-text="option.text"></div>
         <div class="ui-drop-menu-custom-brief">{{ option.text }}【可使用slot-scope进行自定义描述】</div>
       </template>
@@ -10,7 +10,8 @@
   </div>
 </template>
 
-<script>import {DropMenu} from '@csii/vx-mobile'
+<script>
+import {DropMenu} from '@csii/vx-mobile'
 
 export default {
   name: 'drop-menu-demo',
@@ -37,7 +38,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-drop-menu-3

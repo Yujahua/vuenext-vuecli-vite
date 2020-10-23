@@ -5,13 +5,12 @@
       :steps="steps0"
       :current="0.5"
     >
-      <template slot="reached">
+      <template v-slot:reached>
         <ui-icon name="checked"></ui-icon>
       </template>
-      <div
+      <template
         class="custom-content"
-        slot="content"
-        slot-scope="{ index, step }"
+        v-slot:content="{ index, step }"
       >
         <template v-if="index === 0">
           <p class="name active" v-text="step.name"></p>
@@ -23,20 +22,19 @@
         <template v-else>
           <p class="name" v-text="step.name"></p>
         </template>
-      </div>
+      </template>
     </ui-steps>
     <ui-steps
       direction="vertical"
       :steps="steps1"
       :current="1"
     >
-      <template slot="current">
+      <template v-slot:current>
         <ui-icon name="checked"></ui-icon>
       </template>
-      <div
+      <template
         class="custom-content"
-        slot="content"
-        slot-scope="{ index, step }"
+        v-slot:content="{ index, step }"
       >
         <template v-if="index === 1">
           <p class="name active" v-text="step.name"></p>
@@ -47,12 +45,13 @@
         <template v-else>
           <p class="name" v-text="step.name"></p>
         </template>
-      </div>
+      </template>
     </ui-steps>
   </div>
 </template>
 
-<script>import {Steps, Amount, Icon} from '@csii/vx-mobile'
+<script>
+import {Steps, Amount, Icon} from '@csii/vx-mobile'
 
 export default {
   name: 'steps-demo',
@@ -85,7 +84,8 @@ export default {
     }
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-example-child-steps-8
