@@ -11,8 +11,8 @@
       <div class="ui-action-sheet-content">
         <header class="ui-action-sheet-header" v-if="title">{{ title }}</header>
         <ul class="ui-action-sheet-list">
-          <template v-for="(item, index) in options">
             <li
+              v-for="(item, index) in options"
               :key="index"
               :class="{
                 'active': index === clickIndex,
@@ -25,7 +25,6 @@
                 <div class="ui-action-sheet-item-section" v-html="item.text || item.label"></div>
               </div>
             </li>
-          </template>
           <li class="ui-action-sheet-cancel" @click="onCancel">{{ cancelText }}</li>
         </ul>
       </div>

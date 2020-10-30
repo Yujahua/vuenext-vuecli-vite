@@ -8,15 +8,14 @@
     <div class="choose-channel" :class="{active: isChannelActive}">
       <slot></slot>
       <div class="choose-channel-list" v-if="isChannelShow || isSingle">
-        <template v-for="(item, index) in channels">
           <ui-cashier-channel-item
+            v-for="(item, index) in channels"
             :class="{default: index === defaultIndex}"
             :key="index"
             :data="item"
             :active="index === activeChannelIndex"
             @click.native="onChannelItemClick(item, index)"
           />
-        </template>
       </div>
       <div class="choose-channel-list" v-else-if="channels[defaultIndex]">
         <ui-cashier-channel-item

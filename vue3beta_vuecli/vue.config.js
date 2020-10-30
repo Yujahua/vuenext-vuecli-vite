@@ -1,9 +1,20 @@
 const path = require('path')
+const resolve = path.resolve
 
 module.exports = {
     devServer: {
         // host: '0.0.0.0',     // default
         // port: 8080           // default
+    },
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@examples': resolve('examples'),
+                '@csii/vx-mobile$': process.env.env === 'production' ? resolve('lib/@csii/vx-mobile.umd') : resolve('src/components'),
+                '@csii/vx-mobile/lib': !process.env.env === 'production' ? resolve('src/components') : resolve('lib'),
+                '@csii/vx-mobile/components': resolve('src/components')
+            }
+        }
     },
     pluginOptions: {
         'style-resources-loader': {

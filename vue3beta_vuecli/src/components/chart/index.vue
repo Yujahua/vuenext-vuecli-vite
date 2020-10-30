@@ -32,21 +32,19 @@
         </g>
       </g>
       <g class="ui-chart-paths">
-        <template v-for="(path, index) in paths">
+        <div v-for="(path, index) in paths" :key="`chart-${index}`">
           <path
             class="ui-chart-path"
-            :key="`line-${index}`"
             :style="path.style"
             :d="path.value"
           ></path>
           <path
             v-if="path.area"
-            :key="`area-${index}`"
             class="ui-chart-path-area"
             :style="path.area.style"
             :d="path.area.value"
           ></path>
-        </template>
+        </div>
       </g>
     </g>
   </svg>
