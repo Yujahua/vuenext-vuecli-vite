@@ -32,8 +32,8 @@
           </slot>
         </div>
         <footer class="ui-dialog-actions" :class="{ 'is-column': layout === 'column' }">
-          <template v-for="(btn, index) in btns">
             <a
+              v-for="(btn, index) in btns"
               role="button"
               class="ui-dialog-btn"
               :class="{
@@ -54,7 +54,6 @@
               ></ui-icon>
               {{ btn.text }}
             </a>
-          </template>
         </footer>
       </div>
     </ui-popup>
