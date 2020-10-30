@@ -5,7 +5,6 @@
         <slot></slot>
       </div>
       <div class="ui-action-bar-group">
-        <template>
           <ui-button v-for="(item, index) in coerceActions"
             :key=index
             class="ui-action-bar-button"
@@ -21,7 +20,6 @@
           >
             {{ item.text }}
           </ui-button>
-        </template>
       </div>
     </div>
   </div>

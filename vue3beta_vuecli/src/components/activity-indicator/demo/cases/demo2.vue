@@ -20,8 +20,7 @@
 
 <script>
 import {ref} from 'vue'
-// import {ActivityIndicator} from '@csii/vx-mobile'
-import {ActivityIndicator, Button} from '../../../index'
+import {ActivityIndicator, Button} from '@csii/vx-mobile'
 
 export default {
   name: 'activity-indicator-demo',

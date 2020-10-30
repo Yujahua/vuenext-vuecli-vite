@@ -16,8 +16,7 @@
 </template>
 
 <script>
-// import {Icon} from '@csii/vx-mobile'
-import {Icon} from '../../../index'
+import {Icon} from '@csii/vx-mobile'
 
 export default {
   name: 'icon-demo',

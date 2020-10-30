@@ -1,4 +1,5 @@
-import Vue from 'vue'
+// import Vue from 'vue'
+import {createApp} from 'vue'
 import Dialog from './dialog'
 
 /* istanbul ignore next */
@@ -23,8 +24,9 @@ const generate = function({
   onShow = noop,
   onHide = noop,
 }) {
-  const DialogConstructor = Vue.extend(Dialog)
-  const vm = new DialogConstructor({
+  // const DialogConstructor = Vue.extend(Dialog)
+  const DialogConstructor = createApp(Dialog)
+  const vm = DialogConstructor({
     propsData: {
       value: false,
       title,

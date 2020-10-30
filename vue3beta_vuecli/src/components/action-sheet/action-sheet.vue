@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import {reactive, toRefs, watch} from 'vue'
+import {reactive, toRefs, ref, watch} from 'vue'
 
 import Popup from '../popup'
 
@@ -81,7 +81,7 @@ export default {
       clickIndex: -1,
       scroller: '',
     })
-    state.clickIndex = props.defaultIndex
+    state.clickIndex = ref(props.defaultIndex)
     watch(
       () => props.value,
       newVal => {

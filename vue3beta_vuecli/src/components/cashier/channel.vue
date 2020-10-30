@@ -14,7 +14,7 @@
             :key="index"
             :data="item"
             :active="index === activeChannelIndex"
-            @click.native="onChannelItemClick(item, index)"
+            @click.enter="onChannelItemClick(item, index)"
           />
       </div>
       <div class="choose-channel-list" v-else-if="channels[defaultIndex]">
@@ -22,7 +22,7 @@
           class="default"
           :data="channels[defaultIndex]"
           active
-          @click.native="onChannelItemClick(channels[defaultIndex], defaultIndex)"
+          @click.enter="onChannelItemClick(channels[defaultIndex], defaultIndex)"
         />
       </div>
       <div
@@ -60,22 +60,21 @@ export default {
     [ChannelItem.name]: ChannelItem,
   },
 
-  props: [
-    'paymentTitle',
-    'paymentAmount',
-    'paymentDescribe',
-    'moreButtonText',
-    'payButtonText',
-    'payButtonDisabled',
-    'channels',
-    'channelLimit',
-    'defaultIndex',
-  ],
+  props: {
+    paymentTitle: String,
+    paymentAmount: Number,
+    paymentDescribe: String,
+    moreButtonText: String,
+    payButtonText: String,
+    payButtonDisabled: Boolean,
+    channels: Array,
+    channelLimit: Number,
+    defaultIndex: Number,
+  },
   setup(props, {emit}) {
     const isChannelShow = ref(false)
     const isChannelActive = ref(false)
-    const activeChannelIndex = ref(-1)
-    activeChannelIndex.value = props.defaultIndex
+    const activeChannelIndex = ref(props.defaultIndex||-1)
     const isSingle = computed(() => {
       if (props.channelLimit < 1) {
         return true

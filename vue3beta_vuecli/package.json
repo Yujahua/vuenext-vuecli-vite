@@ -12,8 +12,7 @@
     "build:@csii/vx-mobile-wc": "vue-cli-service build --target wc --name csii-vx-mobile ./src/components/index.js",
     "build:lib": "npm run build:@csii/vx-mobile",
     "build:wc": "npm run build:@csii/vx-mobile-wc",
-    "clean": "rimraf ./lib",
-    "output": "vue inspect > output.js"
+    "clean": "rimraf ./lib"
   },
   "dependencies": {
     "core-js": "^3.6.5",

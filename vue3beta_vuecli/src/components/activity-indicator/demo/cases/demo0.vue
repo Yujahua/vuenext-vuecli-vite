@@ -16,8 +16,7 @@
 </template>
 
 <script>
-// import {ActivityIndicator} from '@csii/vx-mobile'
-import {ActivityIndicator} from '../../../index'
+import {ActivityIndicator} from '@csii/vx-mobile'
 
 export default {
   name: 'activity-indicator-demo',
