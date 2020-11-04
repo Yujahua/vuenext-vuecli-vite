@@ -57,8 +57,8 @@ export default {
     },
     transition: {
       type: String,
-      default() {
-        switch (this.position) {
+      default( { position } ) {
+        switch (position) {
           case 'bottom':
             return 'ui-slide-up'
           /* istanbul ignore next */
