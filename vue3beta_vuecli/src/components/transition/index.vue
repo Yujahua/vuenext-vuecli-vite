@@ -1,13 +1,17 @@
-<script>export default {
+<script>
+import {h} from 'vue'
+export default {
   name: 'ui-transition',
 
   functional: true,
 
-  render(h, context) {
-    return h('transition', context.data, context.children)
+  render() {
+    // return h('transition', context.data, context.children)
+    return h('transition')
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .ui-bounce

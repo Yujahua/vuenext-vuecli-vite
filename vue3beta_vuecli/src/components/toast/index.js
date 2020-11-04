@@ -17,34 +17,20 @@ const Toast = function({
   parentNode = document.body,
 }) {
   let vm = Toast._instance
-
   if (!vm) {
     // const ToastConstructor = Vue.extend(ToastOptions)
-    const ToastConstructor = createApp(ToastOptions)
-    vm = Toast._instance = ToastConstructor({
-      propsData: {
-        content,
-        icon,
-        iconSvg,
-        duration,
-        position,
-        hasMask,
-      },
-    }).$mount()
+    vm = Toast._instance = createApp(ToastOptions, {
+      content,
+      icon,
+      iconSvg,
+      duration,
+      position,
+      hasMask,
+    }).mount(document.createElement("span"))
   }
-
-  if (!vm.$el.parentNode) {
+  if (!vm.$el.parentNode.parentNode) {
     parentNode.appendChild(vm.$el)
   }
-
-  vm.content = content
-  vm.icon = icon
-  vm.iconSvg = iconSvg
-  vm.duration = duration
-  vm.position = position
-  vm.hasMask = hasMask
-  // vm.visible = true
-  // vm.fire()
   vm.show()
 
   return vm
@@ -58,8 +44,7 @@ Toast._instance = null
  */
 Toast.hide = () => {
   // const ToastConstructor = Vue.extend(ToastOptions)
-  const ToastConstructor = createApp(ToastOptions)
-  if (Toast._instance instanceof ToastConstructor && Toast._instance.visible) {
+  if (Toast._instance instanceof Proxy && Toast._instance.visible) {
     Toast._instance.hide()
   }
 }

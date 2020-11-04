@@ -25,9 +25,7 @@ const generate = function({
   onHide = noop,
 }) {
   // const DialogConstructor = Vue.extend(Dialog)
-  const DialogConstructor = createApp(Dialog)
-  const vm = DialogConstructor({
-    propsData: {
+  const vm = createApp(Dialog,{
       value: false,
       title,
       icon,
@@ -37,8 +35,7 @@ const generate = function({
       btns,
       transition: 'ui-bounce',
       preventScroll: true,
-    },
-  }).$mount()
+  }).mount(document.createElement("span"))
 
   instances.push(vm)
 
