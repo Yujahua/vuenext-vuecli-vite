@@ -6,8 +6,10 @@ export default {
   functional: true,
 
   render() {
+    const children = this.$slots.default()
     // return h('transition', context.data, context.children)
-    return h('transition')
+    // how to rm transition node, has no idea
+    return h('transition', {}, children)
   },
 }
 

@@ -166,12 +166,12 @@ export default {
     }
     onMounted(() => {
       if (props.appendTo) {
-        props.appendTo.appendChild(that.$el)
+        props.appendTo.appendChild(that.vnode.el)
       }
     })
     onBeforeUnmount(() => {
       if (props.appendTo) {
-        props.appendTo.removeChild(that.$el)
+        props.appendTo.removeChild(that.vnode.el)
       }
     })
     return {
